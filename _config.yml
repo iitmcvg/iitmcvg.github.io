@@ -17,7 +17,7 @@ title                    : "CVI"
 title_separator          : "-"
 name                     : "Computer Vision Intelligence"
 description              : "Home page"
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://iitmcvg.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : iitmcvg
 teaser                   : "/assets/images/CVI.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
