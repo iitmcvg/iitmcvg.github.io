@@ -1,0 +1,28 @@
+---
+title: "Posts"
+layout: archive
+permalink: "/year-archive/"
+excerpt: "A unique line of text to describe this post that will display in an archive listing and meta description with SEO benefits."
+author_profile: false
+#header:
+  #image: /assets/images/CVI_u.jpg
+
+---
+
+{% include base_path %}
+{% capture written_year %}'None'{% endcapture %}
+{% for post in site.posts %}
+  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% if year != written_year %}
+    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
+    {% capture written_year %}{{ year }}{% endcapture %}
+  {% endif %}
+  {% include archive-single.html %}
+{% endfor %}
+
+
+<div class="grid__wrapper">
+  {% for post in site.portfolio %}
+    {% include archive-single.html type="grid" %}
+  {% endfor %}
+</div>
