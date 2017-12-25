@@ -54,3 +54,5 @@ _However, that isn’t what people require. Sometimes, the solutions to the bigg
 _One thing we lack is the know-how of how to move from a prototype to a product. If we have established entrepreneurs, coming to CFI, and sharing their stories of success and failure, that would be of great help to most innovators. E-Cell is one organization which tends to organize these kind of events, and bring entrepreneurs to insti, to share their stories. Hence, entrepreneurship bodies such as E-Cell can help us a lot in pushing prototypes to products, and it would be extremely beneficial if we could have such a tie-up._  
 
 _I saw 1700 people at the GES, which means that there were 1700 people just there, trying to solve the world’s problems. There were people over there talking about solutions to problems, for which we, at CFI, had already built prototypes. As technical people, we don’t see this side of what we build, we don’t see how our products can change the world. CFI needs more entrepreneurial activities, and the solution is right there, in our own insti bodies._
+
+<script id="dsq-count-scr" src="//cvi-iitm.disqus.com/count.js" async></script>
