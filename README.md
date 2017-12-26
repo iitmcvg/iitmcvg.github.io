@@ -20,7 +20,7 @@ Date: 25th December 2017.
 ## Contributing
 
 We would be happy to accept contributions to articles as our site mature.
-You can send in a pull request after conforming to these [guidelines]().
+You can send in a pull request after conforming to these [guidelines](/Contributing.md).
 
 ----
 
