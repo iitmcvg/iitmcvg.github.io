@@ -8,10 +8,19 @@ Theme based on [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minim
 
 ## RoadMap
 
-1. [ ] Jupyter notebook conversion and integration.
-2. [ ] Google Analytics.
+Date: 25th December 2017.
+
+1. [x] Jupyter notebook conversion and integration. (jupyter nbconvert)
+2. [x] Google Analytics.
 3. [ ] New favicon.
 4. [ ] Update projects and documentation.
+---
+
+## Comment Policy (Disqus)
+
+The Mary Sue: [The Mary Sue’s Comment Policy](http://www.themarysue.com/comment-policy/)
+
+We might change this as we proceed.
 ---
 
 ## Contributing

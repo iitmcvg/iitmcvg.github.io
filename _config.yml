@@ -89,7 +89,7 @@ analytics:
 # Site Author
 author:
   name             : "Computer Vision and Intelligence"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "We love AI."
   location         : "IIT Madras"
   email            :
@@ -247,7 +247,7 @@ compress_html:
 
 collections:
   documentation:
-    output: false
+    output: true
     permalink: /:collection/:path/
 
 
