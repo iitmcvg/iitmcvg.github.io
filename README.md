@@ -14,11 +14,19 @@ Date: 25th December 2017.
 2. [x] Google Analytics.
 3. [ ] New favicon.
 4. [ ] Update projects and documentation.
+5. [x] Add contribution guidelines
 ---
+
+## Contributing
+
+We would be happy to accept contributions to articles as our site mature.
+
+You can send in a pull request after conforming to these [guidelines]().
+----
 
 ## Comment Policy (Disqus)
 
-The Mary Sue: [The Mary Sue’s Comment Policy](http://www.themarysue.com/comment-policy/)
+We have largely based our policy on this : _The Mary Sue_: [The Mary Sue’s Comment Policy](http://www.themarysue.com/comment-policy/)
 
 We might change this as we proceed.
 ---
