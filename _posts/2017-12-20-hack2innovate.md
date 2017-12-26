@@ -28,9 +28,9 @@ We had a couple of outside contenders and a group of researchers from one of the
 _We took three deep learning models, one was Deep Face and two other models was general models, one was ResNet, and another was a pre-trained model. We took all of them, we trained them with multiple datasets that we had online, and then we wrote another network to combine all the results from that, and then we trained them, to get the six classes that were required. Our solution had a 92% accuracy!_
 
 ### _Are competitions the right way to promote innovation?_
-_I would say yes. Competitions always orient themselves towards something the world needs, and a lot of today’s competitions are aligned towards achieving 2030’s Sustainable Development Goals (SDG’s). Competitions such as the Smart India Hackathon, definitely promote amazing solutions to today’s solutions.
+_I would say yes. Competitions always orient themselves towards something the world needs, and a lot of today’s competitions are aligned towards achieving 2030’s Sustainable Development Goals (SDG’s). Competitions such as the Smart India Hackathon, definitely promote amazing solutions to today’s solutions._
 
-One thing we lack is the know-how of how to move from a prototype to a product. If we have established entrepreneurs, coming to CFI, and sharing their stories of success and failure, that would be of great help to most innovators. E-Cell is one organization which tends to organize these kind of events, and bring entrepreneurs to insti, to share their stories._
+_One thing we lack is the know-how of how to move from a prototype to a product. If we have established entrepreneurs, coming to CFI, and sharing their stories of success and failure, that would be of great help to most innovators. E-Cell is one organization which tends to organize these kind of events, and bring entrepreneurs to insti, to share their stories._
 
 ### _About his experience at GES, Hyderabad_
 _GES was a wonderful experience. There were a large number of innovative and creative minds, and I got a large number of networking opportunities. I met a lot of interesting people, and it was really an invaluable experience._
