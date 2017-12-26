@@ -1,6 +1,6 @@
 # Official Site for CVI-IITM
 
-![Icon]({{"/assets/avatar.png"}})
+![Icon](/assets/avatar.png)
 
 A Github hosted site at [link](https://iitmcvg.github.io)
 
