@@ -1,5 +1,7 @@
 # Official Site for CVI-IITM
 
+![Icon]({{"/assets/avatar.png"}})
+
 A Github hosted site at [link](https://iitmcvg.github.io)
 
 Theme based on [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/): whose documentation may be found [here](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/)
