@@ -20,8 +20,8 @@ Date: 25th December 2017.
 ## Contributing
 
 We would be happy to accept contributions to articles as our site mature.
-
 You can send in a pull request after conforming to these [guidelines]().
+
 ----
 
 ## Comment Policy (Disqus)
@@ -29,6 +29,7 @@ You can send in a pull request after conforming to these [guidelines]().
 We have largely based our policy on this : _The Mary Sue_: [The Mary Sue’s Comment Policy](http://www.themarysue.com/comment-policy/)
 
 We might change this as we proceed.
+
 ---
 
 ## Contributing
