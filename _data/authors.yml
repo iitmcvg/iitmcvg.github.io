@@ -1,0 +1,11 @@
+# /_data/authors.yml
+# Usage:
+# author: Billy Rick in front matter.
+
+Varun Sundar:
+  name: "Varun Sundar"
+  uri: "http://varun19299.github.io"
+  email: "varun19299@gmail.com"
+  bio: "True peace is in total chaos."
+  avatar: "/assets/avatars/Varun.jpg"
+  twitter: "@varun19299"
