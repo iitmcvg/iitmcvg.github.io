@@ -10,13 +10,15 @@ Theme based on [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minim
 
 ## RoadMap
 
-Date: 25th December 2017.
+Date: 8th January 2018.
 
 1. [x] Jupyter notebook conversion and integration. (jupyter nbconvert)
 2. [x] Google Analytics.
 3. [ ] New favicon.
 4. [ ] Update projects and documentation.
 5. [x] Add contribution guidelines
+6. [ ] Update a Travis CI build status.
+7. [ ] MathJax support for equations.
 ---
 
 ## Contributing

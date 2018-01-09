@@ -2,6 +2,8 @@
 title: "Hack2Innovate"
 categories:
   - media coverage
+header:
+  teaser: /assets/images/posts/2017-12-20-hack2innovate/GES.jpeg
 tags:
   - media
   - competitions

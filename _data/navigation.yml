@@ -10,5 +10,7 @@ main:
     url: "/year-archive/"
   - title: "Documentation"
     url: "/documentation/"
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "Contributing"
+    url: "/contributing/"
+  - title: "Contact Us"
+    url: /contact/

@@ -7,50 +7,39 @@ classes:
   - landing
   - dark-theme
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
+  #overlay_color: "#000"
+  overlay_filter: rgba(255, 0, 0, 0.5)
   overlay_image: assets/images/CVI.jpg
-  cta_label: "Download"
-  cta_url: "https://github.com/mmistakes/minimal-mistakes/"
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
-excerpt: "Bacon ipsum dolor sit amet salami ham hock ham, hamburger corned beef short ribs kielbasa biltong t-bone drumstick tri-tip tail sirloin pork chop."
+  cta_label: "Contact Us"
+  cta_url: "/contact/"
+  caption: "Photo credit: Ayush, IIT-Madras."
+excerpt: "
+
+"
 intro:
-  - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'
+  - excerpt: 'We began as a small group of likeminded people on September 2009 with a vision of building a team of students with deep expertise in the technology of Computer Vision.'
 feature_row:
-  - image_path: assets/images/unsplash-gallery-image-1-th.jpg
+  - image_path: /assets/images/about/IARC.jpg
     alt: "placeholder image 1"
-    title: "Placeholder 1"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder 2"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-  - image_path: /assets/images/unsplash-gallery-image-3-th.jpg
-    title: "Placeholder 3"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    title: "Our Inception"
+    excerpt: "The idea for the formation of such a club was seeded in 2008 when the IIT Madras team had represented India at the International Aerial Robotics Competition (IARC). CVI which competed against elite teams, from other top Universities in IARC 2009, was acknowledged as the best vision team among all the participating teams."
 feature_row2:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
+  - image_path: /assets/images/about/CFI.jpg
     alt: "placeholder image 2"
-    title: "Placeholder Image Left Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
-    url: "#test-link"
+    title: "Centre for Innovation, IIT Madras"
+    excerpt: "We have been fortunate to be a part of IIT Madras' incredible student driven innovation community, spearheaded by the Centre for Innovation (CFI). CVI is one of the many clubs present in the Centre for Innovation (CFI), IIT Madras."
+    url: "http://cfi.iitm.ac.in/"
     btn_label: "Read More"
     btn_class: "btn--primary"
 feature_row3:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
+  - image_path: /assets/images/about/HV.jpg
     alt: "placeholder image 2"
-    title: "Placeholder Image Right Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Right aligned with `type="right"`'
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
+    title: "A Unique History"
+    excerpt: 'Being the only CFI club out of which a start-up has grown, CVI has extraordinary mentorship and motivated and committed members, who have completed Industrial Projects by ITC, The Indian Railways, VDime, Eye hospital CHECK and multiple machine learning projects.'
 feature_row4:
   - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
     alt: "placeholder image 2"
-    title: "Placeholder Image Center Aligned"
+    title: "At Present"
     excerpt: 'This is some sample content that goes here with **Markdown** formatting. Centered with `type="center"`'
     url: "#test-link"
     btn_label: "Read More"
@@ -59,10 +48,10 @@ feature_row4:
 
 {% include feature_row id="intro" type="center" %}
 
-{% include feature_row %}
+{% include feature_row type="center" %}
 
-{% include feature_row id="feature_row2" type="left" %}
+{% include feature_row id="feature_row2" type="center" %}
 
-{% include feature_row id="feature_row3" type="right" %}
+{% include feature_row id="feature_row3" type="center" %}
 
 {% include feature_row id="feature_row4" type="center" %}

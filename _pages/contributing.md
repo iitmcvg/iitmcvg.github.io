@@ -1,8 +1,13 @@
+---
+ title: ""
+ layout: single
+ permalink: "/contributing/"
+
+---
+
 # Contribution Guidelines
 
 As a student run club, we are always enthusiastic about open-source and community contributions. Our objective has always been towards making tools of computer vision and deep learning more accessible and deployable in various situations- so we would want you to keep this in mind.
-
----
 
 ## Copyright and Proprietary Content
 
@@ -12,8 +17,6 @@ Should your post contain any matter that is either proprietary or held under pri
 
 In case certain portions of your post happen to be inspired directly from any other available material, do suitably credit the original source. At CVI, we are committed to adding value to the Deep Learning community, while ensuring that diligence paid in crediting respective authors.
 
----
-
 ## Uploading binary and static files
 
 _Note: all files excluding .md, .yml,.toml files and image files come under the purview of static files for this article_
@@ -21,8 +24,6 @@ _Note: all files excluding .md, .yml,.toml files and image files come under the 
 Since we are hosting our site with Github pages, we would like to follow a BNBR (Be Nice, Be Respectful) policy of not exceeding a said limit size for the repository.
 
 Hence, in order to display larger content (any multimedia or other files) we recommend sending in a public link after using a cloud file service. In particular for weight files, checkpoints and tensorflow graphfiles we are absolutely keen that any such content is not directly added to the repository.
-
----
 
 ## Sending in a Post
 
@@ -41,8 +42,6 @@ You can preview your post locally if you wish to, even prior to submitting a pul
 * Run `bundle exec jekyll serve --drafts`
 * You should now be able to view the local site under localhost:4000 (or similar).
 * Incase you want to edit multiple times, it might be useful to enable the `--incremental` flag, especially as our site contiues to grow.
-
----
 
 ## Converting a Jupyter Notebook for a Post
 
