@@ -4,13 +4,26 @@ main:
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "Home"
     url: "/"
+
   - title: "About"
     url: "/about/"
+
   - title: "Posts"
     url: "/year-archive/"
+
   - title: "Documentation"
     url: "/documentation/"
+
   - title: "Contributing"
     url: "/contributing/"
+
   - title: "Contact Us"
-    url: /contact/
+    url: "/contact/"
+
+  - title: "Projects"
+    url: "/projects/"
+    children:
+      - title: "Completed Projects"
+        url: "/completed-projects/"
+      - title: "Ongoing Projects"
+        url: "/ongoing-projects/"

@@ -40,7 +40,7 @@ feature_row4:
   - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
     alt: "placeholder image 2"
     title: "At Present"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Centered with `type="center"`'
+    excerpt: 'As a club, we undertake projects ranging about topics from computer vision, deep learning, reinforcement learning and natural language processing. We are '
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"

@@ -36,6 +36,13 @@ We might change this as we proceed.
 
 ---
 
+## Form Submissions
+
+* [Staticman](https://staticman.net/docs/)
+* [Formspree](https://formspree.io/)
+
+---
+
 ## Credits
 
 ### Theme
