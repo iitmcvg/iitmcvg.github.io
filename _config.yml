@@ -90,7 +90,7 @@ analytics:
 author:
   name             : "Computer Vision and Intelligence"
   avatar           : "/assets/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "We love AI."
+  bio              : "We teach computers to see."
   location         : "IIT Madras"
   email            :
   uri              :
@@ -247,6 +247,12 @@ compress_html:
 
 collections:
   documentation:
+    output: true
+    permalink: /:collection/:path/
+  ongoing-projects:
+    output: true
+    permalink: /:collection/:path/
+  completed-projects:
     output: true
     permalink: /:collection/:path/
 

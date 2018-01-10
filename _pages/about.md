@@ -2,7 +2,7 @@
 title: "About"
 layout: single
 permalink: "/about/"
-date: 2017-12-25T11:48:41-04:00
+date: 2018-01-10
 classes:
   - landing
   - dark-theme
@@ -17,7 +17,7 @@ excerpt: "
 
 "
 intro:
-  - excerpt: 'We began as a small group of likeminded people on September 2009 with a vision of building a team of students with deep expertise in the technology of Computer Vision.'
+  - excerpt: 'We began as a small group on September 2009 with a vision of building a team of students with  expertise in Computer Vision.'
 feature_row:
   - image_path: /assets/images/about/IARC.jpg
     alt: "placeholder image 1"
@@ -37,11 +37,11 @@ feature_row3:
     title: "A Unique History"
     excerpt: 'Being the only CFI club out of which a start-up has grown, CVI has extraordinary mentorship and motivated and committed members, who have completed Industrial Projects by ITC, The Indian Railways, VDime, Eye hospital CHECK and multiple machine learning projects.'
 feature_row4:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
+  - image_path: /assets/images/about/team.jpg
     alt: "placeholder image 2"
     title: "At Present"
-    excerpt: 'As a club, we undertake projects ranging about topics from computer vision, deep learning, reinforcement learning and natural language processing. We are '
-    url: "#test-link"
+    excerpt: 'As a club, we undertake projects ranging about topics from computer vision, deep learning, reinforcement learning and natural language processing. We are actively involved in projects and conduct sessions among our college community in these areas: with the hope of impacting society with bleeding edge technology.'
+    url: "/projects/"
     btn_label: "Read More"
     btn_class: "btn--primary"
 ---
