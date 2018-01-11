@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Image Filtering"
+category: computer_vision
 description: "Another Step closer to a document scanner."
 ---
 ## Introduction:

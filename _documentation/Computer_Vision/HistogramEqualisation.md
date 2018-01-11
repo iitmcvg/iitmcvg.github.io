@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Histogram Equalisation"
+category: computer_vision
 description: "Bringing in a bit of statistics ..."
 ---
 

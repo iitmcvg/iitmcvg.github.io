@@ -6,6 +6,6 @@ author_profile: true
 ---
 
 {% for item in site.completed-projects %}
-  <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
+  <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
   <p>{{ item.description }}</p>
 {% endfor %}

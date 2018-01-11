@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Thresholding"
+category: computer_vision
 description: "A basic weapon of every computer vision enthusiast."
 ---
 

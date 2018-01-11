@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Object Detection and Tracking"
+category: computer_vision
 description: "Computer vision approach to object tracking."
 ---
 

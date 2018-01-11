@@ -4,8 +4,10 @@ layout: single
 permalink: "/documentation/"
 
 ---
-
+## Computer Vision
 {% for item in site.documentation %}
-  <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
+  {% if item.category=="computer_vision" %}
+  <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
   <p>{{ item.description }}</p>
+  {% endif %}
 {% endfor %}

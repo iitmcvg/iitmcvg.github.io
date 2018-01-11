@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Corner Detection"
+category: computer_vision
 description: "Use OpenCV's built in functions for corner detection"
 ---
 

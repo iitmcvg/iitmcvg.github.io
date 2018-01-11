@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Morphological Transformations"
+category: computer_vision
 description: "Erode and sharpen outlines with morphological transforms."
 ---
 

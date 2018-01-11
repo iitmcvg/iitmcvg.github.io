@@ -13,7 +13,7 @@ Over the years, we have been able to venture into quite a variety of projects-to
   {% if forloop.index==6 %}
   {% break %} // won't work
   {% endif %}
-  <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
+  <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
   <p>{{ item.description }}</p>
 {% endfor %}
 
@@ -22,6 +22,6 @@ Over the years, we have been able to venture into quite a variety of projects-to
   {% if forloop.index==6 %}
   {% break %} // won't work
   {% endif %}
-  <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
+  <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
   <p>{{ item.description }}</p>
 {% endfor %}

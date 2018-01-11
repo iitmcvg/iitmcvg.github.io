@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Foreground Extraction"
+category: computer_vision
 description: "An introduction to a fairly useful technique..."
 ---
 

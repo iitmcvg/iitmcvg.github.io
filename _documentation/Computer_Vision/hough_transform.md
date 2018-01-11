@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Hough Transform"
+category: computer_vision
 description: "The start of transform techniques and interpolations in computer vision."
 ---
 ## Hough Line Transform

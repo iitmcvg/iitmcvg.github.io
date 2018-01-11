@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Contours"
+category: computer_vision
 description: "Outline contours of images."
 ---
 

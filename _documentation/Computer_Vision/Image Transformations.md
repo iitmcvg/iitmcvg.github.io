@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Image Transformations"
+category: computer_vision
 description: "A Step closer to a document scanner."
 ---
 <h4 align='center'>By Rajat V D</h4>

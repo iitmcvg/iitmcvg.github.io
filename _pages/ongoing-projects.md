@@ -9,3 +9,8 @@ author_profile: true
   <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
   <p>{{ item.description }}</p>
 {% endfor %}
+
+{% for item in site.documentation.Computer_Vision %}
+  <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+  <p>{{ item.description }}</p>
+{% endfor %}

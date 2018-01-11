@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Template Matching"
+category: computer_vision
 description: "When  correlation meets convolution."
 ---
 
