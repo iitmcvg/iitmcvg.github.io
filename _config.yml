@@ -158,7 +158,7 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 
 # Conversion
-markdown: kramdown
+markdown: kramdown #redcarpet #kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
@@ -271,6 +271,7 @@ defaults:
       comments: true
       share: true
       related: true
+      use_math: true
 
   # _pages
   - scope:
@@ -280,6 +281,7 @@ defaults:
       layout: single
       author_profile: true
       comments: true
+      use_math: true
 
   # _documentation
   - scope:
@@ -292,6 +294,7 @@ defaults:
       read_time: true
       comments: true
       related: true
+      use_math: true
 
   - scope:
       path: ""
@@ -303,6 +306,7 @@ defaults:
       read_time: true
       comments: true
       related: true
+      use_math: true
 
   - scope:
       path: ""
@@ -314,3 +318,4 @@ defaults:
       read_time: true
       comments: true
       related: true
+      use_math: true

@@ -167,7 +167,7 @@ Image(filename='bilateral1.jpg')
 
 
 
-![jpeg]({{"/assets/images/documentation/computer_vision/Image_Filtering_files/Image_Filtering_files/Image_Filtering_16_0.jpeg"}})
+![jpeg]({{"/assets/images/documentation/computer_vision/Image_Filtering_files/Image_Filtering_16_0.jpeg"}})
 
 
 

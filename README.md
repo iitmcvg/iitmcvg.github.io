@@ -18,7 +18,7 @@ Date: 8th January 2018.
 4. [ ] Update projects and documentation.
 5. [x] Add contribution guidelines
 6. [ ] Update a Travis CI build status.
-7. [ ] MathJax support for equations.
+7. [x] MathJax support for equations.
 ---
 
 ## Contributing
@@ -40,6 +40,22 @@ We might change this as we proceed.
 
 * [Staticman](https://staticman.net/docs/)
 * [Formspree](https://formspree.io/)
+
+---
+
+## MathJax Support
+
+Added by using the `use_math` tag.
+
+For now defaulted it to every post, page. Will revert in the future in case the pages slow down.
+
+References for the Syntax:
+
+* https://gist.github.com/mikelove/cbf6eb431406852ba725
+* http://www.dianacai.com/blog/2015/09/12/making-blog/
+* And Ofcourse this: http://www.gastonsanchez.com/visually-enforced/opinion/2014/02/16/Mathjax-with-jekyll/
+
+We'll stick to kramdown render (for markdown), since it plays fairly nice with both Jekyll 3.x and MathJax.
 
 ---
 

@@ -60,12 +60,12 @@ $$T: (x,y) \rightarrow (x',y')$$
 or
 $$T(x,y) = (x',y')$$
 
-$T$ satisfies two special properties. The first one is:
+$$T$$ satisfies two special properties. The first one is:
 
 $$T(cx,cy) = T(cx',cy')$$
-where $c$ is some constant. And the second property is:
+where $$c$$ is some constant. And the second property is:
 
-If $T(x,y) = (x',y')$ and $T(u,v) = (u',v')$, then
+If $$T(x,y) = (x',y')$$ and $$T(u,v) = (u',v')$$, then
 $$T(x+u,y+v) = (x'+u', y'+v')$$
 
 Now, it can be shown that the application of any linear transformation to some point can be represented as multiplying the vector corresponding to that point by a particular sqaure matrix. We can then repesent the linear transformation as follows:
@@ -236,7 +236,7 @@ imshow(img4)
 
 
 
-![png]({{"/assets/images/documentation/computer_vision/Hough_Transform/Image%20Transformations_files/Image%20Transformations_14_1.png"}})
+![png]({{"/assets/images/documentation/computer_vision/Image%20Transformations_files/Image%20Transformations_14_1.png"}})
 
 
 It is pretty clear that the above resulting image looks as if someone took the camera up close to the painting from the original image, and took a new photo. This is a really useful application of perspective transforms.
