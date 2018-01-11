@@ -81,11 +81,11 @@ $$ \left[ {\begin{array}{cc}
    y' \\
   \end{array} } \right]$$
 
-Now, a special property of a linear transformation is that it always maps the zero vector to itself. This is where an affine transform differs from a linear transform. An affine transform is a linear transform, along with a shift of the origin. Using condensed matrix notation, and letting the linear transform matrix be called $A$, an affine transform maps the vector $x$ to $x'$ and is given by:
+Now, a special property of a linear transformation is that it always maps the zero vector to itself. This is where an affine transform differs from a linear transform. An affine transform is a linear transform, along with a shift of the origin. Using condensed matrix notation, and letting the linear transform matrix be called $$A$$, an affine transform maps the vector $$x$$ to $$x'$$ and is given by:
 
 $$x' = Ax + b$$
 
-where $b$ is the vector representing the shift of the origin. Using a bit of manipulation, we can write this as follows:
+where $$b$$ is the vector representing the shift of the origin. Using a bit of manipulation, we can write this as follows:
 
 $$\left[ {\begin{array}{c}
    x'_1 \\
@@ -99,7 +99,7 @@ $$\left[ {\begin{array}{c}
    1 \\
   \end{array} } \right]$$
 
-The $2 \times 3$ matrix is called the affine matrix. When we want to perform an affine transform on an image, we need to provide OpenCV with this matrix. Let us see an example of this in action.
+The $$2 \times 3$$ matrix is called the affine matrix. When we want to perform an affine transform on an image, we need to provide OpenCV with this matrix. Let us see an example of this in action.
 
 
 ```python
@@ -137,7 +137,7 @@ imshow(img2)
 
 The above result shows an example of a typical affine transform. Let us observe some key points. Firstly, we notice that the black grid lines which originally formed a grid of squares, now intersect in a grid of parallelograms. Also, lines which were parallel before the transform remain parallel after the transform. This is a key characteristic of any linear transform.
 
-Now, observe the green and blue segments. In the original picture, they are perpendicular to each other and of equal length. In some length scale, we can call them unit vectors. Notice that after the transform, they are no longer perpendicular, and their lengths have changed. In fact, the new blue and green vectors are just the first and second columns of the matrix $A$, in the particular length scale. This nifty fact allows us to easily visualize an affine transform simply by looking at the affine matrix. One must also remember that the third column of the affine matrix is simply the position vector of the old origin after the transform.
+Now, observe the green and blue segments. In the original picture, they are perpendicular to each other and of equal length. In some length scale, we can call them unit vectors. Notice that after the transform, they are no longer perpendicular, and their lengths have changed. In fact, the new blue and green vectors are just the first and second columns of the matrix $$A$$, in the particular length scale. This nifty fact allows us to easily visualize an affine transform simply by looking at the affine matrix. One must also remember that the third column of the affine matrix is simply the position vector of the old origin after the transform.
 
 ### Rotations
 
@@ -163,14 +163,14 @@ imshow(rotated)
 ![png]({{"/assets/images/documentation/computer_vision/Image%20Transformations_files/Image%20Transformations_8_1.png"}})
 
 
-In the above code block, we rotated the image about its centre by an angle of $60$ degrees and also shrunk the image by a factor of $0.6$. Notice again that the gaps in the resultant image is filled in by black pixels.
+In the above code block, we rotated the image about its centre by an angle of $$60$$ degrees and also shrunk the image by a factor of $$0.6$$. Notice again that the gaps in the resultant image is filled in by black pixels.
 <hr>
 Another interesting type of transform is to mirror the image about some line. I will leave the question of whether this transform is affine or not, and how to perform it if it is, as an exercise for the reader. (HINT: think about the blue and green unit vectors of the mirrored image)
 
 ## Perspective transforms
 Another very useful type of image transformation is the perspective transform. An intuitive way to think about this transform is the following: change the camera position from which the original image was taken, and then take a new photo of the same three dimensional object to get the transformed image. This method will not always work because the change in perspective(moving the camera) might uncover previously occluded objects. So the perspective transform of 2D images should be thought of as camera movements which do not alter the occlusion of objects.
 
-Mathematically, perspective transforms are represented as $3 \times 3$ matrices. The details of the mathematics behind these transforms can get quite involved, so it will not be covered. The way to describe a perspective transform is to look at what happens to a set of 4 points out of which no three are collinear. If you can decide where any such 4 points will be mapped to, the perspective transform is determined. OpenCV has a handy function to get us the matrix associated with this transform from the maps of 4 points. This is shown below:
+Mathematically, perspective transforms are represented as $$3 \times 3$$ matrices. The details of the mathematics behind these transforms can get quite involved, so it will not be covered. The way to describe a perspective transform is to look at what happens to a set of 4 points out of which no three are collinear. If you can decide where any such 4 points will be mapped to, the perspective transform is determined. OpenCV has a handy function to get us the matrix associated with this transform from the maps of 4 points. This is shown below:
 
 
 ```python
