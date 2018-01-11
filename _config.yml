@@ -58,7 +58,7 @@ atom_feed:
 search                   : true # true, false (default)
 
 # SEO Related
-google_site_verification :
+google_site_verification : "MbTggbV-YAjYCclIrEz1mfK_XuHBuH7L9jWjmkaCUb0" # See https://www.google.com/webmasters/verification/verification?hl=en&siteUrl=http://iitmcvg.github.io/&continue=https://www.google.com/webmasters/tools/dashboard?hl%3Den%26authuser%3D0%26siteUrl%3Dhttp://iitmcvg.github.io/%26sig%3DALjLGbM9Vnx8hmPBkIKHyNvmIaJlPXjKYw&theme=wmt&authuser=0&priorities=vfile,vmeta,vdns,vanalytics,vtagmanager&tid=alternate
 bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :

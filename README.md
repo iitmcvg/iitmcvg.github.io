@@ -24,7 +24,7 @@ Date: 8th January 2018.
 ## Contributing
 
 We would be happy to accept contributions to articles as our site mature.
-You can send in a pull request after conforming to these [guidelines](/Contributing.md). :smile:
+You can send in a pull request after conforming to these [guidelines](_pages/Contributing.md). :smile:
 
 ----
 
@@ -52,6 +52,7 @@ We might change this as we proceed.
 - <https://mademistakes.com>
 - <https://twitter.com/mmistakes>
 - <https://github.com/mmistakes>
+- A bit of inspiration from here too : <https://mademistakes.com/articles/using-jekyll-2016/>
 
 ### Icons + Demo Images:
 

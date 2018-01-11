@@ -37,6 +37,10 @@
       </footer>
     </div>
 
+    {% if site.google_verify %}
+    <meta name="google-site-verification" content="{{ site.google_site_verification }}">
+    {% endif %}
+
     {% include scripts.html %}
 
   </body>
