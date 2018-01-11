@@ -54,7 +54,7 @@ imshow(img) # matplotlib function to display an image
 We will use this image to test our transformations. Note that the image consists of black grid lines. These lines will help us visualise how the different transformations occur. Also notice the green and blue segments in the top corner. They will also be useful to us.
 
 ## Affine transformations
-Before we go into the details of what an affine transform is, let us first understand the concept of a linear transformation. A linear transformation $T$ is in general defined as a function which takes in the coordinates of a point on a plane, and returns another point, with some special properties.
+Before we go into the details of what an affine transform is, let us first understand the concept of a linear transformation. A linear transformation $$T$$ is in general defined as a function which takes in the coordinates of a point on a plane, and returns another point, with some special properties.
 
 $$T: (x,y) \rightarrow (x',y')$$
 or
