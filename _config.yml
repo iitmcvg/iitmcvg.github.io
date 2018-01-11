@@ -289,3 +289,28 @@ defaults:
       layout: single
       author_profile: true
       share: true
+      read_time: true
+      comments: true
+      related: true
+
+  - scope:
+      path: ""
+      type: ongoing-projects
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      read_time: true
+      comments: true
+      related: true
+
+  - scope:
+      path: ""
+      type: completed-projects
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      read_time: true
+      comments: true
+      related: true
