@@ -16,7 +16,7 @@ locale                   : "en-GB"
 title                    : "CVI"
 title_separator          : "-"
 name                     : "Computer Vision Intelligence"
-description              : "Home page"
+description              : "Official site for CVI-IIT Madras"
 url                      : "https://iitmcvg.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : iitmcvg
@@ -67,10 +67,10 @@ naver_site_verification  :
 twitter:
   username               :
 facebook:
-  username               :
+  username               : "iitmcvi"
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : "/assets/images/CVI.jpg" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
