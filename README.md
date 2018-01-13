@@ -19,6 +19,7 @@ Date: 8th January 2018.
 5. [x] Add contribution guidelines
 6. [ ] Update a Travis CI build status.
 7. [x] MathJax support for equations.
+8. [ ] Google Insight Optimisation: we currently score a 90.
 ---
 
 ## Contributing
