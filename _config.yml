@@ -94,7 +94,7 @@ author:
   location         : "IIT Madras"
   email            : "cvigroup.cfi@gmail.com"
   uri              :
-  forums           : "{site.url}/forums/"
+  forums           : "https://iitmcvg.github.io/forums/"
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
