@@ -4,7 +4,7 @@ layout: single
 permalink: "/forums/"
 author_profile: true
 ---
-External link: https://groups.google.com/forum/#!forum/cvgroup2013
+[External link](https://groups.google.com/forum/#!forum/cvgroup2013){: .btn .btn--success}
 {% raw %}
 <iframe id="forum_embed"
   src="javascript:void(0)"
