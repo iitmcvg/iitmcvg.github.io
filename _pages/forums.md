@@ -2,7 +2,7 @@
 title: "Forums"
 layout: single
 permalink: "/forums/"
-author_profile: false
+author_profile: true
 ---
 
 {% raw %}
