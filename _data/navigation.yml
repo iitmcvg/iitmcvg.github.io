@@ -11,6 +11,14 @@ main:
   - title: "Posts"
     url: "/year-archive/"
 
+  - title: "Projects"
+    url: "/projects/"
+    children:
+    - title: "Completed Projects"
+      url: "/completed-projects/"
+    - title: "Ongoing Projects"
+      url: "/ongoing-projects/"
+
   - title: "Documentation"
     url: "/documentation/"
 
@@ -19,11 +27,3 @@ main:
 
   - title: "Contact Us"
     url: "/contact/"
-
-  - title: "Projects"
-    url: "/projects/"
-    children:
-      - title: "Completed Projects"
-        url: "/completed-projects/"
-      - title: "Ongoing Projects"
-        url: "/ongoing-projects/"
