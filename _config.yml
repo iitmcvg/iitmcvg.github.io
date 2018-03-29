@@ -92,8 +92,9 @@ author:
   avatar           : "/assets/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "We teach computers to see."
   location         : "IIT Madras"
-  email            :
-  uri              :
+  email            : "cvigroup.cfi@gmail.com"
+  uri              : 
+  forums           : "/forums/"
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
