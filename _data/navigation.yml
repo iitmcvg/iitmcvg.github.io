@@ -8,6 +8,9 @@ main:
   - title: "About"
     url: "/about/"
 
+  - title: "Fourms"
+    url: "/forums/"
+
   - title: "Posts"
     url: "/year-archive/"
 
