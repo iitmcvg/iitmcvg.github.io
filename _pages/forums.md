@@ -11,9 +11,9 @@ Hello
   src="javascript:void(0)"
   scrolling="no"
   frameborder="0"
-  width="900"
-  height="700">
-  bhdbsh
+  width="100%"
+  height="100%">
+  Your browser doesn't support iFrames.
 </iframe>
 <script type="text/javascript">
   document.getElementById('forum_embed').src =
@@ -22,5 +22,3 @@ Hello
      + '&parenturl=' + encodeURIComponent(window.location.href);
 </script>
 {% endraw %}
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dHHmUF9gs70" frameborder="0" allowfullscreen></iframe>
