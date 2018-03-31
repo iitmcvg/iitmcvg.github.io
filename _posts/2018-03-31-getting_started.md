@@ -31,7 +31,7 @@ Here are some references to get started with Computer Vision, Deep Learning and 
 ### Courses
 * The udacity course [ud810]() is a MOOC version of the Georgia Tech course : CS4495. You can find the 2015 run [here](https://www.cc.gatech.edu/~afb/classes/CS4495-Spring2015-OMS/) and the 2017 run [here](https://www.cc.gatech.edu/~hays/compvision/). The 2015 run was taken primarily by Aaron Bobbick, while the 2017 counterpart by [James Hays](https://www.cc.gatech.edu/~hays/).
 
-Both runs closely follow the Szeliski book, so you might find it easier to refer to this.
+Both run closely follow the Szeliski book, so you might find it easier to refer to this.
 
 * MIT's computer vision course: this is available on [youtube](https://www.youtube.com/watch?v=CLOAswsxudo).
 
