@@ -2,7 +2,6 @@
 title: "Getting Started"
 categories:
   - tutorials
-  - primer
 description: "A 2018 take on an introduction to deep vision, reinforcement learning and NLP; an age when cross domain boundaries are fast dissolving."
 header:
   teaser: https://www.nvidia.com/content/dam/en-zz/Solutions/research/research-home-areas-computer-vision-407-ud@2X.jpg
