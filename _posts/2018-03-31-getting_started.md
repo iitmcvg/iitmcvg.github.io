@@ -73,9 +73,27 @@ We have included jupyter notebooks for most computer vision techniques under our
 ## Reinforcement Learning
 
 ### Courses
+
+* [David Silver’s Lectures](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html): A 10 hour intro to classical RL with a little bit of Deep RL mixed in from DeepMind’s David Silver. He’s one of the guys who worked on the famous Deep Q-Network that achieved super-human performance on most Atari games as well as Alpha Go which beat the world’s best Go players. Sutton & Barto’s book makes a great companion for these lectures since a lot of the material is borrowed from here.
+
+* [B Ravindran’s NPTEL Lectures](http://nptel.ac.in/syllabus/106106143/): An extremely rigorous 12-week course from IITM’s very own Ravi Sir. This set of lectures is one of the most complete RL resources you can find online.
+(Bonus fact: Ravi Sir’s PhD guide was Andrew Barto. The more you know!)
+
+* [Berkley Deep RL Bootcamp](https://sites.google.com/view/deep-rl-bootcamp/lectures?authuser=0): This 10 lecture series features Vlad Mnih(DeepMind), John Schulman(OpenAI) and several other top researchers in the field of Deep RL. It should only be watched you’ve  understood all the concepts of classical RL very well since this discusses recent advances in Deep RL research.
+
 ### References
+
+* [Introduction to Reinforcement Learning](https://drive.google.com/file/d/1xeUDVGWGUUv1-ccUMAZHJLej2C7aAFWY/view)- Sutton & Barto: Pretty much the go-to guide for RL these days. It introduces all the classical algorithms that you need to gain a solid understanding of the field.
+
+* [Andrej Karpathy’s intro to Deep RL](http://karpathy.github.io/2016/05/31/rl/): This isn’t a textbook but should give you a flavour of what Deep RL consists of and how it’s different from classical RL.
+
 ### Libraries
-### Sample Code
+
+* Environments: In order to train an RL agent, it needs to interact with an environment or a game so that it can receive information about its performance. [OpenAI Gym](https://gym.openai.com/) and [DeepMind Lab](https://deepmind.com/blog/open-sourcing-deepmind-lab/) are 2 great packages for python that are easy to use.
+
+* Classic Algorithmns: Pybrain and RLLab offer implementations of several RL algorithms like SARSA, Q-learning and so on.
+
+* Deep RL: Any standard Deep Learning library like [Tensorflow](https://www.tensorflow.org/) or [Pytorch](http://pytorch.org/) is sufficient to implement your Deep RL agent.
 
 ## Natural Language Processing (and Generation)
 ### Courses
