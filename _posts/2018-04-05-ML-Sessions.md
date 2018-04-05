@@ -53,7 +53,7 @@ _Note: We will be shortly updating a script file for installs. This will however
 
 We've been putting together a fairly comprehensive post for getting started with deep vision, RL and NLP. You can find it [here]().
 
-Do reach out to us if you need any support.
+Do reach out to us if you need any support. You can post any issues you may encounter on the group forums.
 Join the WhatsApp group to stay in touch: [link]( https://chat.whatsapp.com/EEN2EpQbJCk8wy2kaKR8ZQ) [https://chat.whatsapp.com/EEN2EpQbJCk8wy2kaKR8ZQ] .
 
 Cheers!
