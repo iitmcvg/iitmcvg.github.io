@@ -14,11 +14,11 @@ toc_label: "Sessions"
 toc_icon: "gear"
 ---
 
-**What?** ML Sessions
+**What?** ML Sessions.
 
-**When?** 9th, 10th and 12th April
+**When?** 9th, 10th and 12th April 2018.
 
-**Where?** CRC 102
+**Where?** CRC 102.
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d124406.89289444235!2d80.16030355909216!3d12.990045923321086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3a52677fdb777ceb%3A0xb9d8a78a4b0ef7d3!2sClass+Room+Complex%2C+IIT+Madras%2C+Indian+Institute+Of+Technology%2C+Chennai%2C+Tamil+Nadu+600036!3m2!1d12.9900553!2d80.2303441!5e0!3m2!1sen!2sin!4v1522947421266" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 
@@ -31,6 +31,8 @@ We’ll be delving into both the libraries popularly used to deploy architecture
 Laptops will be needed for the sessions (no kidding), and the software and the other pre-requisites are enlisted below.
 
 ## Software Pre-requisites
+
+{% include figure image_path="https://cdn-images-1.medium.com/max/1502/1*RwVhfOeLkfr3mtOs_70zgg.png" alt="Ml Session" caption="The frameworks we'll use." %}
 
 _Note: We will be shortly updating a script file for installs. This will however make use of pip and will work for Linux and macOS users only._
 
