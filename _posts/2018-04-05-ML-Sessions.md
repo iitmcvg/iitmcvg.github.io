@@ -1,7 +1,7 @@
 ---
 title: "Machine Learning Sessions"
 categories:
-  - tutorials
+  - sessions
 description: "A brief pre-requisite guide for the ML Session."
 header:
   teaser: https://cdn-images-1.medium.com/max/1024/1*ZkZS46p7Lbw-PDBtPMfEEw.jpeg
