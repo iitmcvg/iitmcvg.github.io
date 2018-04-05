@@ -8,7 +8,6 @@ header:
 tags:
   - announcement
   - session
-
 toc: true
 toc_label: "Sessions"
 toc_icon: "gear"
