@@ -27,7 +27,7 @@ We are organising a three day **Machine Learning session** on the 9th, 10th and 
 
 We’ll be delving into both the libraries popularly used to deploy architectures, as well as a bit of math behind it. By the end of the sessions, you should be able to train your own neural net and understand (to some extents
 
-Laptops will be needed for the sessions (no kidding), and the software and the other pre-requisites are enlisted below.
+Laptops will be needed for the sessions (_no kidding_), and the software and the other pre-requisites are enlisted below.
 
 ## Software Pre-requisites
 
@@ -35,7 +35,7 @@ Laptops will be needed for the sessions (no kidding), and the software and the o
 
 _Note: We will be shortly updating a script file for installs. This will however make use of pip and will work for Linux and macOS users only._
 
-* **Operating System:** Preferably Linux or macOS(OS X). You could weather the battle with windows however, consider that WSL for windows and conda have got better over the years. Regarding linux, please stick to LTS releases (hello Ubuntu), since tensorflow can be troublesome on the shorter releases.
+* **Operating System:** Preferably Linux or macOS(_formerly OS X_). You could weather the battle with windows however, consider that WSL for windows and conda have got better over the years. Regarding linux, please stick to LTS releases (_hello Ubuntu_), since tensorflow can be troublesome on the shorter releases.
 
 * **OpenCV**: OpenCV 3.3+
 
@@ -54,6 +54,7 @@ _Note: We will be shortly updating a script file for installs. This will however
 We've been putting together a fairly comprehensive post for getting started with deep vision, RL and NLP. You can find it [here]().
 
 Do reach out to us if you need any support. You can post any issues you may encounter on the group forums.
+
 Join the WhatsApp group to stay in touch: [link]( https://chat.whatsapp.com/EEN2EpQbJCk8wy2kaKR8ZQ) [https://chat.whatsapp.com/EEN2EpQbJCk8wy2kaKR8ZQ] .
 
 Cheers!
