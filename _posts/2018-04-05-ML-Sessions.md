@@ -29,6 +29,10 @@ We’ll be delving into both the libraries popularly used to deploy architecture
 
 Laptops will be needed for the sessions (_no kidding_), and the software and the other pre-requisites are enlisted below.
 
+## Session Contents
+
+1. Session One: Collab [Link] (https://colab.research.google.com/drive/1lTye1Dv2VJ3vqstdfOElD1FcWjTmTLGM)
+
 ## Software Pre-requisites
 
 {% include figure image_path="https://cdn-images-1.medium.com/max/1502/1*RwVhfOeLkfr3mtOs_70zgg.png" alt="Ml Session" caption="The frameworks we'll use." %}

@@ -59,6 +59,15 @@ We have included jupyter notebooks for most computer vision techniques under our
 ## Machine Learning
 
 ### Courses
+
+* [**CS229**](http://cs229.stanford.edu/syllabus.html) Stanford course dealing with ML. It has notes and problem statements, recorded video lectures are available on [YouTube](https://www.youtube.com/watch?v=UzxYlbK2c7E).
+
+* [**Machine Learning - Coursera**](https://www.coursera.org/learn/machine-learning) This course is taught by Andrew NG, which gives an introduction to Machine Learning, Data Mining, Statistical Pattern Recognition. It has programming excercises in *Octave*.
+
+* [**Introduction to Machine Learning**](https://in.udacity.com/course/intro-to-machine-learning--ud120) is an online course (Udacity) where feature engineering, evaluation of Machine Learning models are taught. Its approximately a 10 week, Intermediate Level course.
+
+* [**Machine Learning**](https://in.udacity.com/course/machine-learning--ud262) is also an online course (Udacity) by Georgia Tech which is a graduate level course covering area of Artificial Intelligence. Introduction to Supervised, Unsupervised and Reinforcement Learning. Requires Prerequisites.
+
 ### References
 ### Libraries
 ### Sample Code
@@ -66,6 +75,17 @@ We have included jupyter notebooks for most computer vision techniques under our
 ## Deep Learning
 
 ### Courses
+
+* [**Neural Networks for Machine Learning**](https://www.coursera.org/learn/neural-networks?siteID=SAyYsTvLiGQ-Es75F2LQK_4jLsTIRNfi4A&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ) A coursera online course by Geoffrey Hinton ( University of Toronto). In this course you will be taught about ANNs and how they are applied to speech recognition, image classification, image segmentation, NLP etc.
+
+* [**Introduction to Deep Learing**](http://introtodeeplearning.com/index.html) This is a MIT course where deep learning is introduced and applied to machine translation, image recognition, game playing, image generation and more.
+
+* [**Deep Learning**](https://in.udacity.com/course/deep-learning--ud730?utm_medium=referral&utm_campaign=api) This is a udacity course by Google where basic deep learing is introduced in a friendly manner.Learn to solve problems which were considered difficult, using deep learning.
+
+* [**CS244n: Natural Language Processing with Deep Learning**](http://web.stanford.edu/class/cs224n/) In this course, deep learning is specifically applied to Natural language processing, text processing and speech recognition. You will learn how to use Recurrent Neural nets with attention to solve Machine translation, seq2seq mapping and other NLP related applications.
+
+* [**CS231n: Convolutional Neural Networks for Visual Recongition**](http://cs231n.stanford.edu/) Here deep learning is specifically applied to solve computer vision applications.  This course is a deep dive into details of the deep learning architectures with a focus on learning end-to-end models for these tasks, particularly image classification. During the 10-week course, students will learn to implement, train and debug their own neural networks and gain a detailed understanding of cutting-edge research in computer vision.
+
 ### References
 ### Libraries
 ### Sample Code
