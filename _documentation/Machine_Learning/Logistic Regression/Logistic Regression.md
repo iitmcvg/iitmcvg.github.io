@@ -8,7 +8,7 @@ description: "Linear classifiers with a sigmoid function."
 
 ### Introduction
 
-<p> A particular case of discriminative approach (fit $$ p (y|{x}) $$ directly, where <b>x</b> is the feature vector, y is the prediction) to building a probabilistic classifier, logisitic regression (despite the name being a misnomer), assumes parameters to be linear. </p>
+<p> A particular case of discriminative approach (fit  p (y|{x}) directly, where <b>x</b> is the feature vector, y is the prediction) to building a probabilistic classifier, logisitic regression (despite the name being a misnomer), assumes parameters to be linear. </p>
 
 ### Model Specification
 

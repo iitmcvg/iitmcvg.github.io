@@ -4,7 +4,7 @@ title: "Linear Regression"
 category: machine_learning
 description: "Least squares : when your data seems nice..."
 ---
-<h5 align='center'>By Rajat V D</h3>
+<h5 align='center'>By Rajat V D</h5>
 
 ## Introduction
 In this notebook, we will be exploring the concept of Regression, and in particular, Linear Regression. Regression is basically a process for finding a best fit model given some data. Specifically, we can represent the model using some parameters, and our goal is to minimize some notion of fitting error between the model and the data, over the range of values of the parameters. Let us represent our data as an input-output pair, where the input is denoted by $x$ and the output by $y$. Note that these could be, in general, vectors of any size. We represent the parameters of our model also as a vector, say, $\beta$. So now we can express our goal as the following:
