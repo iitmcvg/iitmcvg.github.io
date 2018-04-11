@@ -32,6 +32,7 @@ Laptops will be needed for the sessions (_no kidding_), and the software and the
 ## Session Contents
 
 1. Session One: Collab [Link] (https://colab.research.google.com/drive/1lTye1Dv2VJ3vqstdfOElD1FcWjTmTLGM)
+2. Session Two: Collab [link](https://colab.research.google.com/drive/1SyLP06KH1K-AQzbnkUXhQKnt5hESSBsk)
 
 ## Software Pre-requisites
 
