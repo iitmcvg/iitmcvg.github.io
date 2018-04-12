@@ -31,9 +31,9 @@ Laptops will be needed for the sessions (_no kidding_), and the software and the
 
 ## Session Contents
 
-1. Session One: Collab [Link] (https://colab.research.google.com/drive/1lTye1Dv2VJ3vqstdfOElD1FcWjTmTLGM)
+1. Session One: Collab [link] (https://colab.research.google.com/drive/1lTye1Dv2VJ3vqstdfOElD1FcWjTmTLGM)
 2. Session Two: Collab [link] (https://colab.research.google.com/drive/1SyLP06KH1K-AQzbnkUXhQKnt5hESSBsk)
-
+3. Session Two: Collab [link] (https://colab.research.google.com/drive/1b4AAqd1AYII8vK3YUjJMEHc8XCxNnW-U)
 ## Software Pre-requisites
 
 {% include figure image_path="https://cdn-images-1.medium.com/max/1502/1*RwVhfOeLkfr3mtOs_70zgg.png" alt="Ml Session" caption="The frameworks we'll use." %}
