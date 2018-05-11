@@ -12,6 +12,7 @@ tags:
 toc: true
 toc_label: "Sessions"
 toc_icon: "gear"
+mathjax: true
 ---
 
 ## What is Machine Learning?
@@ -25,7 +26,7 @@ if its performance on T, as measured by P, improves with experience E.
 
 ## The essence of mahine learning
 * A pattern exists.
-* We cannot pin it down mathematially. (not straightforward, or we want to reverse-engineer)
+* We cannot pin it down mathematically. (not straightforward, or we want to reverse-engineer)
 * We have data on it.
 
 ![alt]({{"/assets/images/posts/2018-05-09-Introduction-to-Machine-Learning/sess_workflow.png"}})
