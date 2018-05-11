@@ -51,17 +51,17 @@ object.
 
 ## The Basic premise of learning
 
-* Using a set of observations to unover an underlying proess
-_broad premise =⇒ many variations_
-*  Supervised Learning (also count
+* Using a set of observations to uncover an underlying process
+*broad premise =⇒ many variations*
+*  Supervised Learning
 * Unsupervised Learning
-* Reinforement Learning
+* Reinforcement Learning
 
 ## Supervised learning
 
 Supervised learning regroups different techniques which all share the same principles:
 
-* The training dataset contains inputs data (your predictors) and the value you want to predict (which can be numeric or not).  
+* The training dataset contains inputs data ( your predictors ) and the value you want to predict (which can be numeric or not).  
 
 * The model will use the training data to learn a link between the input and the outputs. Underlying idea is that the training data can be generalized and that the model can be used on new data with some accuracy.
 
