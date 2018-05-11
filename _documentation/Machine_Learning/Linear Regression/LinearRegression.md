@@ -3,6 +3,7 @@ layout: single
 title: "Linear Regression"
 category: machine_learning
 description: "Least squares : when your data seems nice..."
+mathjax: true
 ---
 <h5 align='center'>By Rajat V D</h5>
 
