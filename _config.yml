@@ -297,6 +297,7 @@ defaults:
       related: true
       use_math: true
 
+# Ongoing Projects
   - scope:
       path: ""
       type: ongoing-projects
@@ -308,7 +309,8 @@ defaults:
       comments: true
       related: true
       use_math: true
-
+      
+# Completed Projects
   - scope:
       path: ""
       type: completed-projects
