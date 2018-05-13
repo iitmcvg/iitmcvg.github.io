@@ -10,18 +10,57 @@ Theme based on [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minim
 
 ## RoadMap
 
-Date: 8th January 2018.
+Date: 12th May 2018.
 
 1. [x] Jupyter notebook conversion and integration. (jupyter nbconvert)
 2. [x] Google Analytics.
-3. [ ] New favicon.
+3. [x] New favicon.
 4. [ ] Update projects and documentation.
 5. [x] Add contribution guidelines
 6. [ ] Update a Travis CI build status.
 7. [x] MathJax support for equations.
 8. [ ] Google Insight Optimisation: we currently score a 90.
----
+9. [x] Setup scripts and Ipynb converter.
 
+---
+## Install a local copy
+
+Linux and macOS is supported.
+
+* Run `bash utils/setup.sh`.
+
+* Run `bundle exec jekyll serve --drafts --trace`.
+
+---
+## Convert .ipynb to a Blog post
+
+If you would not like to export your notebook manually, you can choose to use the conversion script. This will  convert the notebook into a markdown file with the appropriate templating.
+
+The .ipynb notebook may be referenced from anywhere on your local machine.
+
+To use the same:
+
+```
+usage: convert_nb.py [-h] -nb NOTEBOOK -t TITLE -d DESCRIPTION [-e] [-ty TYPE]
+                     [-bp BLOGPATH]
+
+Convert .ipynb notebook into a blog post
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -nb NOTEBOOK, --notebook NOTEBOOK
+                        notebook path
+  -t TITLE, --title TITLE
+                        Title of article [post|page|any class type]
+  -d DESCRIPTION, --description DESCRIPTION
+                        Description of article
+  -e, --execute         Execute the jupyter notebook before converting
+  -ty TYPE, --type TYPE
+                        notebook type
+  -bp BLOGPATH, --blogpath BLOGPATH
+                        Blogsite path
+```
+---
 ## Contributing
 
 We would be happy to accept contributions to articles as our site mature.
