@@ -20,6 +20,8 @@ from PIL import Image
 import io
 import datetime
 
+from nbconvert import nbconvertapp
+
 import nbformat
 from nbconvert.preprocessors import ExecutePreprocessor
 
@@ -80,7 +82,9 @@ class convert_notebook(object):
         self.notebook_path=notebook_path
 
         self.type=type
-        self.blogpath=blogpath
+
+        # Python doesnt recognise ~ at times
+        self.blogpath=os.path.expanduser(blogpath)
         self.title=title
         self.description=description
 
@@ -101,9 +105,21 @@ class convert_notebook(object):
                 pass
         self.output_path=self.blogpath+"/"+output_path
         md=MarkdownExporter()
-        self.output,self.resources=md.from_filename(self.notebook_path,{'config_dir': '/Users/Ankivarun/.jupyter', \
-                                                 'unique_key': self.notebook_name,\
-                                                 'output_files_dir': output_path})
+
+        # Extract config dictionary
+        nbapp=nbconvertapp.NbConvertApp()
+        self.config=nbapp.init_single_notebook_resources(self.notebook_path)
+        self.config['output_files_dir']=output_path
+
+        '''
+        Of type:
+
+        {'config_dir': '/Users/Ankivarun/.jupyter', \
+         'unique_key': self.notebook_name,\
+         'output_files_dir': output_path}
+        '''
+
+        self.output,self.resources=md.from_filename(self.notebook_path,self.config)
 
     def save_images(self):
         '''
@@ -160,7 +176,7 @@ if __name__=='__main__':
     parser.add_argument("-d","--description",help="Description of article",required=True)
     parser.add_argument("-e","--execute",help="Execute the jupyter notebook before converting",action='store_const', const=1,default=False)
     parser.add_argument("-ty","--type",help="notebook type",default="posts")
-    parser.add_argument("-bp","--blogpath",help="Blogsite path",default="/Users/Ankivarun/Sites/iitmcvg.github.io")
+    parser.add_argument("-bp","--blogpath",help="Blogsite path",default="~/Sites/iitmcvg.github.io")
     args=parser.parse_args()
     notebook_path=args.notebook
     title=args.title
