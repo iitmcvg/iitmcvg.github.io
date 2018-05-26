@@ -44,15 +44,15 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   gem install bundler
   gem install bundler jekyll
 
-  # Add Jekyll
-  bundle add jekyll
-
-  # Install gems
-  bundle install
-
-
 else
   echo "This script supports only UNIX, LINUX"
   echo "Exiting script"
   exit 1
 fi
+
+
+# Add Jekyll
+bundle add jekyll
+
+# Install gems
+bundle install
