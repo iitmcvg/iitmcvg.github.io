@@ -31,6 +31,14 @@ Linux and macOS is supported.
 
 * Run `bundle exec jekyll serve --drafts --trace`.
 
+or
+
+* Run 'bash utils/run.sh'
+
+In both cases, drafts will be visible. You can use this to preview your local changes.
+
+Send in a pull request to contribute your article.
+
 ---
 ## Convert .ipynb to a Blog post
 
