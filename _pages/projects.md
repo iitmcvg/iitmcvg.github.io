@@ -12,6 +12,15 @@ Over the years, we have been able to venture into quite a variety of projects-to
 
 You may click on the subheadings to view the entire list.
 
+## [Ongoing Projects](/ongoing-projects)
+{% for item in site.ongoing-projects %}
+  {% if forloop.index==6 %}
+  {% break %} // won't work
+  {% endif %}
+  <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+  <p>{{ item.description }}</p>
+{% endfor %}
+[Read More](/ongoing-projects){: .btn .btn--success}
 
 ## [Completed Projects](/completed-projects)
 {% for item in site.completed-projects %}
@@ -21,12 +30,4 @@ You may click on the subheadings to view the entire list.
   <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
   <p>{{ item.description }}</p>
 {% endfor %}
-
-## [Ongoing Projects](/ongoing-projects)
-{% for item in site.ongoing-projects %}
-  {% if forloop.index==6 %}
-  {% break %} // won't work
-  {% endif %}
-  <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
-  <p>{{ item.description }}</p>
-{% endfor %}
+[Read More](/completed-projects){: .btn .btn--success}
