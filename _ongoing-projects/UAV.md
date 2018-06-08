@@ -13,7 +13,7 @@ Our adaptive and intelligent path planning algorithms will be based on depth est
 
 {% include figure image_path="/assets/images/projects/UAV/im3.png" %}
 
-The drones will utilize state-of-the-art deep learning models to extract essential information like number of survivors , severity of the situation , detection of fire etc. The drone will be able to do real time object detection using Convolutional Neural Networks (CNNs) and a tiny YOLO framework. It will be able to gather a lot of information like number of survivors and will also be able to do activity recognition using RNNs(Recurrent Neural Networks). The drones will then transmit this information along with the live video feed and the GPS locations to the base station(or army headquarters)
+The drones will utilize state-of-the-art deep learning models to extract essential information like number of survivors , severity of the situation , detection of fire etc. The drone will be able to do real time object detection using Convolutional Neural Networks (CNNs) and a tiny YOLO framework. It will be able to gather a lot of information like number of survivors and will also be able to do activity recognition using RNNs(Recurrent Neural Networks). The drones will then transmit this information along with GPS coordinates and live video feed to the base station(or army headquarters)
 
 {% include figure image_path="/assets/images/projects/UAV/im2.png" %}
 
