@@ -42,7 +42,7 @@ It is a surface defined such that the nearest data point to the surface is _as f
 
 So the aim of the classifier is to make the margin as large as possible. Now intuitively lets see what such a line means.....
 
-For any linear classifier  $($as covered in Linear Regression and Logistic Regression$)$ we have covered so far, we have seen,
+For any linear classifier  ( as covered in Linear Regression and Logistic Regression ) we have covered so far, we have seen,
 
 $$ \begin{equation}
 y = \beta_{0} + x_{1}\beta_{1} + x_2\beta_2 + ...... + x_n\beta_n
@@ -50,7 +50,7 @@ y = \beta_{0} + x_{1}\beta_{1} + x_2\beta_2 + ...... + x_n\beta_n
 
 represents the line that acts as a decision boundary in linear classifiers. Where
 
-$$x_1, x_2, ...., x_n$$ are the features $($inputs$)$
+$$x_1, x_2, ...., x_n$$ are the features ( inputs )
 
 and
 
@@ -96,7 +96,7 @@ x_n
 y = \beta_0 + x^{T}\beta
 \end{equation} $$
 
-So all the points satisfying the condition $$y = 0$$ represent the decision boundary and the solid black line in the figure. $($Since the image is in 2 dimensions, the equation of the decision boundary reduces to $$y = \beta_0 + \beta_1x$$.$)$
+So all the points satisfying the condition $$y = 0$$ represent the decision boundary and the solid black line in the figure. ( Since the image is in 2 dimensions, the equation of the decision boundary reduces to $$y = \beta_0 + \beta_1x$$. )
 
 In a normal linear classifier, what would we have done?
 
@@ -109,7 +109,7 @@ Notice the class encocings
 
 And what exactly do we seek in a SVM?
 
-**We want the point to be atleast $$M$$ $($Margin$)$ distance away from the line $$\beta_0 + x^{T}\beta = 0$$.**
+**We want the point to be atleast $$M$$ ( Margin ) distance away from the line $$\beta_0 + x^{T}\beta = 0$$.**
 
 So our optimization problem changes to,
 
@@ -139,15 +139,15 @@ Assuming that the data is distinctly separated and a nice line can be drawn to s
 
 Solving this optimization problem (We will not go into the details here) we will get $$\beta_0, \beta_{n \times 1}$$ which represents the optimal separating hyperplane with maximum margin.
 
-Note that in the way in which we have formulated this optimization problem, we are maximizing the margin without allowing $($strictly$)$ any data points inside that margin. $($No Tolerence whatsoever$)$
+Note that in the way in which we have formulated this optimization problem, we are maximizing the margin without allowing ( strictly ) any data points inside that margin. ( No Tolerence whatsoever )
 
 Solving this optimization problem, we can show that: 
 
 * **Only the data points on the margin matter when determining the values of $$\beta_0$$ and $$\beta_{n\times 1}$$.**
 
-* Other points which are not on the margin $($which are further away from the margin$)$ do not affect the solution.
+* Other points which are not on the margin ( which are further away from the margin ) do not affect the solution.
 
-* Vectors $($data points $$x$$ $)$ which are on the margin are called **support vectors**. They effectively support the margin of the classifier.
+* Vectors ( data points $$x$$  ) which are on the margin are called **support vectors**. They effectively support the margin of the classifier.
 
 ![support_vectors](http://www.saedsayad.com/images/SVM_2.png){: .align-center}
 
@@ -181,8 +181,8 @@ plt.show()
 ![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_5_0.png){: .align-center}
 
 
-Let's view the decision boundaries predicted by various kernals $($a kernel is a similarity function with is passed to the SVM function$)$, here:
-* RBF $($Radial Basis Function$)$
+Let's view the decision boundaries predicted by various kernals ( a kernel is a similarity function with is passed to the SVM function ), here:
+* RBF ( Radial Basis Function )
 * Linear
 * Polynomial
 
@@ -306,11 +306,11 @@ You can see in the plot that some data points have entered the forbidden area th
 
 Other notes on $$SVM$$:
 
-* If none of the training data fall within the margin of the classifier and a linear assumption $($as of now$)$ is true , then this classifier will be a _very robust_ classifier. This is because the solution ($$\beta's$$) depend only on the support vectors not on other points. So it is immune to noise.  
+* If none of the training data fall within the margin of the classifier and a linear assumption ( as of now ) is true , then this classifier will be a _very robust_ classifier. This is because the solution ($$\beta's$$) depend only on the support vectors not on other points. So it is immune to noise.  
 
 * On the other hand if a stochastic process is generating data points and if the points fall well within the margin of the classifier. It can affect the classifier very well since we gave no allowance to any datapoints in any class to be present within the margin.   
 
-* To accommodate the noisy data point $($possibly$)$ it will shrink the margin and thereby lose its robust nature.  
+* To accommodate the noisy data point ( possibly ) it will shrink the margin and thereby lose its robust nature.  
 
 * Classifiers that take not only support vectors, but those that take the entire dataset to find the distribution will be more accurate in this case.
 

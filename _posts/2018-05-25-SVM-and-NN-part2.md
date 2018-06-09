@@ -57,7 +57,7 @@ You can think of the two sets of arrows as the two weight matrices $$W_1$$ and $
 
 ## 'Training' a neural network
 
-Ok, so now that we have a model which can more or less approximate any function we want, how do we set the weights of our model to fit the function which we want $($this job is called training the model$)$. First, we need a measure of how good of a fit a particular set of weights will result in. We can evaluate this measure by giving our model some inputs and comparing the outputs of the model to the actual outputs we want. The set of inputs and outputs which we already have is called the **dataset**. So, the dataset can be represented as $$(x_i,y_i)$$. Suppose our model gives the output $$y'_ i$$ when given an input $$x_i$$. Ideally, $$y'_i = y_ i$$ for all $$i$$. But this will never be the case. So we have to look at how $$y_i$$ and $$y'_ i$$ differ. We can define a **loss** function on $$y_i$$ and $$y'_ i$$ which outputs one number representing how far away the two vectors are from each other. Our goal would then be to minimize the sum of this loss function **over all the points in our dataset** by varying the weights and biases of the network. Our job of training the network is now reduced to an optimization problem. 
+Ok, so now that we have a model which can more or less approximate any function we want, how do we set the weights of our model to fit the function which we want ( this job is called training the model ). First, we need a measure of how good of a fit a particular set of weights will result in. We can evaluate this measure by giving our model some inputs and comparing the outputs of the model to the actual outputs we want. The set of inputs and outputs which we already have is called the **dataset**. So, the dataset can be represented as $$(x_i,y_i)$$. Suppose our model gives the output $$y'_ i$$ when given an input $$x_i$$. Ideally, $$y'_i = y_ i$$ for all $$i$$. But this will never be the case. So we have to look at how $$y_i$$ and $$y'_ i$$ differ. We can define a **loss** function on $$y_i$$ and $$y'_ i$$ which outputs one number representing how far away the two vectors are from each other. Our goal would then be to minimize the sum of this loss function **over all the points in our dataset** by varying the weights and biases of the network. Our job of training the network is now reduced to an optimization problem. 
 
  We solve this problem using the following approach. We find the output of the network to all the inputs from the dataset and evaluate the total loss using the outputs. We then find the **gradient** of the loss function with respect to ALL the parameters in the network. Then, we tweak the parameters to move in the opposite direction of the gradient so as to reduce the loss. We then repeat this process many times over all our samples until we reach a minimum in the loss.
 
@@ -79,7 +79,7 @@ Here are some short answers without detail, as these problems are not trivial.
 
 * We can't always be sure that we will reach a global minimum. But it turns out in practice that a local minimum is pretty good too. Also how much to move along the gradient in each step is another hyperparameter called the **learning rate**.
 
-* To reduce computation we 'batch' the data. For each parameter update we will now only use a part $($a batch$)$ of the data and not the entire dataset.
+* To reduce computation we 'batch' the data. For each parameter update we will now only use a part ( a batch ) of the data and not the entire dataset.
 
 We won't go over the details of backpropagation in this post, as it takes a while to digest, but we will instead implement a neural network and train it.
 
@@ -310,7 +310,7 @@ lay2 = Model(inputs=inp,outputs=layer2)
 presoft = Model(inputs=inp,outputs=presoftmax)
 ```
 
-Let's plot the first component of the output for each point on the x-y plane. This is basically the model's prediction of the probability of the point belonging to the first class $($the gaussian with smaller radius$)$.
+Let's plot the first component of the output for each point on the x-y plane. This is basically the model's prediction of the probability of the point belonging to the first class ( the gaussian with smaller radius ).
 
 
 ```
@@ -511,7 +511,7 @@ c_1x_1 + c_2x_2 + c_3x_3
 \end{bmatrix}
 \end{equation} $$
 
-So multiplying a matrix with a column vector returns a vector which is a linear combination of its column vectors $($as shown above$)$.
+So multiplying a matrix with a column vector returns a vector which is a linear combination of its column vectors ( as shown above ).
 
 * $$C(A) = $$ It denotes the column space of the matrix $$A$$. Column space is the span of all the column vectors of Matrix $$A$$.
 
@@ -634,7 +634,7 @@ cos^{2}\theta + sin^{2}\theta = 1
 This image describes the why this matrix is called **Rotation matrix** in 2D.
 
 If the input column vector $$x$$ is taken to represent coordinates of a point in 2D space, then after
-doing the transformation $($ $(i.e)$ multiplying with matrix $$A$$ $)$,
+doing the transformation (  $(i.e)$ multiplying with matrix $$A$$  ),
 
 We get the rotated point represented as $$[x^{'}, y^{'}]$$ in this image.
 
@@ -672,11 +672,11 @@ plt.show()
 
 Observations:
 
-* Entire Ellipse $($Represented in blue$)$ is rotated with respect to the initial ellipse $($green one$)$ by the angle $$\theta$$ we specified the program.
+* Entire Ellipse ( Represented in blue ) is rotated with respect to the initial ellipse ( green one ) by the angle $$\theta$$ we specified the program.
 
 Inferences:
 
-* This kind of matrix rotate the space. $($If only rotation is desired, keep the determinant 1$)$
+* This kind of matrix rotate the space. ( If only rotation is desired, keep the determinant 1 )
 
 
 ```
@@ -765,7 +765,7 @@ $$ \begin{equation}
 \boldsymbol{A}v = \lambda v
 \end{equation} $$
 
-So, if we find **eigenvectors** of matrix $$A$$, we can say that those directions are the directions that will be only **scaled** by the transformation by this matrix $($scaled by its eigenvalue$)$. All the other directions other than eigenvector directions, will be **both** scaled and rotated, to maintain **continuity of the transformation**.
+So, if we find **eigenvectors** of matrix $$A$$, we can say that those directions are the directions that will be only **scaled** by the transformation by this matrix ( scaled by its eigenvalue ). All the other directions other than eigenvector directions, will be **both** scaled and rotated, to maintain **continuity of the transformation**.
 
 If $$\boldsymbol{v}$$ is an eigenvector of $$\boldsymbol{A}$$, and has an eigenvalue $$\lambda$$, whats the eigenvalue of $$c\boldsymbol{v}$$, c is a constant?
 
@@ -811,7 +811,7 @@ Whats the use of this???
 
 We want to create a matrix that can distort the space in such a way that we want our data to get sepatated.
 
-* Neural Nets distort the input data in high dimentional space using these matrix multiplications, $($apply activations in middle$)$, until the data becomes linearly separable.
+* Neural Nets distort the input data in high dimentional space using these matrix multiplications, ( apply activations in middle ), until the data becomes linearly separable.
 * These distortions can be analysed by eigendecomposition and singular value decomposition of weight matrices of the layers of deep neural nets.
 
 
@@ -889,8 +889,8 @@ w_2, v_2, y_matrix_2 = eigen_decomposition(A, x_c, y_c)
 
 Obseravtions:
 
-* The vectors near to eigenvectors do not rotate that much. They get scaled by the eigenvalue $($if its an eigenvector, else a small rotation is present$)$.
-* Vectors that are far away from either of the eigenvectors are severly rotated and scaled. $($Maintain the continuity of the figure$)$
+* The vectors near to eigenvectors do not rotate that much. They get scaled by the eigenvalue ( if its an eigenvector, else a small rotation is present ).
+* Vectors that are far away from either of the eigenvectors are severly rotated and scaled. ( Maintain the continuity of the figure )
 * Volume has increased greater than the initial circle, which indicates that the determinant of the matrix is greater than 1.
 
 
@@ -905,7 +905,7 @@ w_2b, v_2b, y_matrix_2b = eigen_decomposition(A, x_c, y_c, bias = bias)
 
 Observations:
 
-* Other than other observations $($listed in the previous plot$)$, we can see the bias has just shifted the distorted figure along that direction $($bias vector's direction$)$.
+* Other than other observations ( listed in the previous plot ), we can see the bias has just shifted the distorted figure along that direction ( bias vector's direction ).
 
 So we now know why bias is needed
 
@@ -921,9 +921,9 @@ $$ \begin{equation}
 y = mx
 \end{equation} $$
 
-So addition of bias gives **extra freedom** to move anywhere in the space $($translation$)$ and multiplying with the weight matrix enables the model to distort, scale, or rotate the space $($with center at origin$)$ the space.
+So addition of bias gives **extra freedom** to move anywhere in the space ( translation ) and multiplying with the weight matrix enables the model to distort, scale, or rotate the space ( with center at origin ) the space.
 
-So Neural Net basicaly **traanslates** $($due to the bias$)$, **distorts** data points by scaling and rotating them $($weights$)$ in hyperdimentional space, **with an aim to find a transformation to make the data linearly separable at the end**.
+So Neural Net basicaly **traanslates** ( due to the bias ), **distorts** data points by scaling and rotating them ( weights ) in hyperdimentional space, **with an aim to find a transformation to make the data linearly separable at the end**.
 
 
 ```
@@ -973,7 +973,7 @@ w_4, v_4, y_matrix_4 = eigen_decomposition(A_minus, x, y)
 ![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_86_1.png){: .align-center}
 
 
-When Determinant is less than zero we get a reflection about y axis but the deformation is same $($except the reflection$)$
+When Determinant is less than zero we get a reflection about y axis but the deformation is same ( except the reflection )
 
 
 ## Enough of theory! Lets have an hands on seesion how to implement neural networks!
@@ -1426,4 +1426,4 @@ print("Evaluation result on Test Data : Loss = {}, accuracy = {}".format(test_lo
     Evaluation result on Test Data : Loss = 1.4804802495956422, accuracy = 0.4701
 
 
-**Try to maximize your test accuracy!!! Take it as a challenge. $($Tuning parameters is an art :P$)$**
+**Try to maximize your test accuracy!!! Take it as a challenge. ( Tuning parameters is an art :P )**

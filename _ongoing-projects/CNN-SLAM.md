@@ -4,7 +4,7 @@ title: "CNN SLAM"
 description: "Simultaneous Localisation and Mapping in 2018"
 ---
 
-__Simultaneous Localisation and Mapping__ $($SLAM$)$ is a rather useful addition for most robotic systems, wherein the vision module takes in a video stream and attempts to map the entire field of view. This allows for all sorts of "smart" bots, such as those constrained to perform a given task. A really good read onto what SLAM is can be found [here](https://nicolovaligi.com/deep-learning-robotics-slam.html).
+__Simultaneous Localisation and Mapping__ ( SLAM ) is a rather useful addition for most robotic systems, wherein the vision module takes in a video stream and attempts to map the entire field of view. This allows for all sorts of "smart" bots, such as those constrained to perform a given task. A really good read onto what SLAM is can be found [here](https://nicolovaligi.com/deep-learning-robotics-slam.html).
 
 SLAM is usually known as an egg-or-chicken problem - since we need a precise map to localise bots and a precise localisations to create a map - and is usually classified as a hard problem in the field of computer vision.
 
