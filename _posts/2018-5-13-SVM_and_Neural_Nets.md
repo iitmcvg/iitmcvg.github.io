@@ -6,56 +6,57 @@ description: " Hello "
 mathjax: true
 ---
 
-This post forms the first part of the introductory material we covered during our sessions on SVMs and Neural Networks. Both posts are slightly more biased towards a probabilistic angle to build intuition.
+This post forms the first part of the introductory material covered during our sessions on SVMs and Neural Networks. Both posts are slightly more biased towards a probabilistic angle to build intuition.
 
 
 ## What are Support Vector Machines?
 
-* Given 2 classes as shown in the image, $$\ H1, H2, H3$$ all represent the possible decision boundary that can be predicted be your classifier. Which decision boundary is the preferred one?
+* Given 2 classes as shown in the image, $$ H1, H2$$ and $$H3$$ all represent the possible decision boundaries that can be predicted to be your classifier. Which decision boundary is the preferred one?
 
-* $$H1$$ is wrong as its not separating the classes properly
+* $$H1$$ is wrong as it is not separating the classes properly
 
-* Both $$H2$$ and $$H3$$ separates the classes correctly. What's the difference between these decision boundaries?
+* Both $$H2$$ and $$H3$$ separate the classes correctly. What's the difference between these decision boundaries?
 
-* The problem is even if the data is linearly separable, we arent sure that which line ($$H1, H2, H3$$) does the classifier ends up learning. $$SVM$$s were initially born out of the need to answer this question.
-![svm_idea](http://www.bogotobogo.com/python/scikit-learn/images/svm/svm_diagram.png)
+* The problem is that even if the data is linearly separable, we can't be sure about which line ($$H1, H2, H3$$) the classifier ends up learning. $$SVM$$s were initially born out of the need to answer this question.
+
+![svm_idea](http://www.bogotobogo.com/python/scikit-learn/images/svm/svm_diagram.png){: .align-center}  
 
 
-The answer to this question is to define an optimal separating hyperplane.
+The answer to this question is to define an **Optimal Separating Hyperplane**.
 
 ---
 
 ## What is an Optimal Separating Hyperplane?
 
-Its a surface such that the nearest data point to the surface is _as far away as possibe_ among all such surfaces.
+It is a surface defined such that the nearest data point to the surface is _as far away as possible_ from it $($as compared to other surfaces$)$ .
 
-* Nearest data point need not belong to just one class.
+* The nearest data point need not belong to just one class.
 
-* So in the previous image, the line $$H2$$ is by definition not a optimal separating hyperplane. This is because, its not satisfying the "$$as\ far\ away\ as\ possible$$" condition. In fact the data points are much closer to the separating hyper plane in this case.
+* So in the previous image, the line $$H2$$ is by definition not a optimal separating hyperplane. This is because, it is not satisfying the "as far away as possible" condition. In fact the data points are very close to the separating hyper plane in this case.
 
-* On the other hand, $$H3$$ is optimally separating as the distance from either class data points are maximum, and any further change will result in either of the distance reducing.
+* On the other hand, $$H3$$ is optimally separating the data points since the distance from either class's data points are maximum, and any further change in its position will result in reducing the distance between the one of the nearest data points and the hyperplane.
 
-* When you are maximising the distance of the closest point to the separating hyperplane, that means that the closest data point from either of the class is at the same distance away from the hyper plane.
+* When you are maximising the distance of the closest points from the separating hyperplane, it basically means that the closest data point from both the classes are at the same distance from the hyper plane.
 
-![svm_optimal_hyperplane](https://www.researchgate.net/profile/Fabio_Faria2/publication/236212250/figure/fig2/AS:299339575513097@1448379524785/The-SVM-classifier-builds-a-maximum-margin-decision-hyperplane-to-separate-two-classes.png)
+![svm_optimal_hyperplane](https://www.researchgate.net/profile/Fabio_Faria2/publication/236212250/figure/fig2/AS:299339575513097@1448379524785/The-SVM-classifier-builds-a-maximum-margin-decision-hyperplane-to-separate-two-classes.png){: .align-center}
 
-So the aim of the classifier is to make the margin  as large as possible. Now intuitively lets see what such a line means.....
+So the aim of the classifier is to make the margin as large as possible. Now intuitively lets see what such a line means.....
 
-Any linear classifier ( as covered in Linear Regression, Logistic Regression ) we have covered so far, we have seen,
+For any linear classifier  $($as covered in Linear Regression and Logistic Regression$)$ we have covered so far, we have seen,
 
 $$ \begin{equation}
 y = \beta_{0} + x_{1}\beta_{1} + x_2\beta_2 + ...... + x_n\beta_n
 \end{equation} $$
 
-Represents the line that acts as a decision boundary in linear classifiers. Where
+represents the line that acts as a decision boundary in linear classifiers. Where
 
-$$x_1, x_2, ...., x_n$$ are the features (inputs)
+$$x_1, x_2, ...., x_n$$ are the features $($inputs$)$
 
 and
 
-$$\beta_0, \beta_1, \beta_2, ...... \beta_n $$ are the weights and biases respectively.
+$$\beta_0$$ is the bias and  $$\beta_1, \beta_2, ...... \beta_n $$ are the weights.
 
-Now for convinience let define 2 matrices
+Now for convenience let us define 2 matrices:
 
 $$ \begin{equation}
 \beta =
@@ -95,25 +96,26 @@ x_n
 y = \beta_0 + x^{T}\beta
 \end{equation} $$
 
-So all the points satisfying the condition, $$y = 0$$ represent the decision boundary and the solid black line in the figure. (Since the image represents 2-D, equation of the decision boundary reduces to $$y = \beta_0 + \beta_1x$$)
+So all the points satisfying the condition $$y = 0$$ represent the decision boundary and the solid black line in the figure. $($Since the image is in 2 dimensions, the equation of the decision boundary reduces to $$y = \beta_0 + \beta_1x$$.$)$
 
-In normal linear classifier, what would we have done?
+In a normal linear classifier, what would we have done?
 
 If,
 $$ \begin{equation}
-\beta_0 + x^T\beta < 0 \implies Class\  -1\  (Note\ the\ Class\ encoding) \\
+\beta_0 + x^T\beta < 0 \implies Class\  -1  \\
 \beta_0 + x^T\beta > 0 \implies Class\  +1
 \end{equation} $$
+Notice the class encocings
 
 And what exactly do we seek in a SVM?
 
-**We want the point to be atleast $$M\ (Margin)$$ distance away from the line $$\beta_0 + x^{T}\beta = 0$$.**
+**We want the point to be atleast $$M$$ $($Margin$)$ distance away from the line $$\beta_0 + x^{T}\beta = 0$$.**
 
 So our optimization problem changes to,
 
 $$ \begin{equation}
-\beta_0 + x^T\beta < M \implies y_i =  -1 \\
-\beta_0 + x^T\beta > M \implies y_i =  +1
+\beta_0 + x_i^T\beta < M \implies y_i =  -1 \\
+\beta_0 + x_i^T\beta > M \implies y_i =  +1
 \end{equation} $$
 
 Where $$y_i$$ is the class label.
@@ -121,33 +123,33 @@ Where $$y_i$$ is the class label.
 In a single line it can be written as
 
 $$ \begin{equation}
-y_i(\beta_0 + x^T\beta) > M
+y_i(\beta_0 + x_i^T\beta) > M
 \end{equation} $$
 
-This is our constraint. Whats our objective ?
+This is our constraint. What's our objective ?
 
-Our objective is to maximize the $$margin$$ of the classifier. So the optimization unfolds like this,
+Our objective is to maximize the margin of the classifier. So the optimization unfolds like this,
 
 $$ \begin{equation}
 \max_{\beta_0, \beta, ||\beta|| = 1} M \\
-\\ subject\ to\ y_i(\beta_0 + x^T\beta) > M\ \forall\  i
+\\ subject\ to\ y_i(\beta_0 + x_i^T\beta) > M\ \forall\  i
 \end{equation} $$
 
-Assuming that the data is nicely separated and a nice line can separate it.
+Assuming that the data is distinctly separated and a nice line can be drawn to separate it.
 
-Solving this optimization problem (which we will not go into the details) we will get $$\beta_0, \beta_{n \times 1}$$ which represent the optimally separating plane with maximum margin.
+Solving this optimization problem $($We will not go into the details here$)$ we will get $$\beta_0, \beta_{n \times 1}$$ which represents the optimal separating hyperplane with maximum margin.
 
-Note the way in which we formulated this optimization problem, we are maximizing the margin without allowing (strictly) any data points inside that margin. (No Tolerence whatsoever)
+Note that in the way in which we have formulated this optimization problem, we are maximizing the margin without allowing $($strictly$)$ any data points inside that margin. $($No Tolerence whatsoever$)$
 
-Solving this optimization problem, we can prove that
+Solving this optimization problem, we can show that: 
 
-* $$Only\ the\ data\ points\ on\ the\ margin\ matters\ in\ determining\ the\ values\ of\ \beta_0 and\ \beta_{n\times 1}.$$
+* **Only the data points on the margin matter when determining the values of $$\beta_0$$ and $$\beta_{n\times 1}$$.**
 
-* Other points which are not on the margin (which are further away from the margin) of the classifier cannot affect the solution.
+* Other points which are not on the margin $($which are further away from the margin$)$ do not affect the solution.
 
-* Vectors (data points $$x$$) which are on the margin are called $$support\ vectors$$. They essentially support the margin of the classifier.
+* Vectors $($data points $$x$$ $)$ which are on the margin are called **support vectors**. They effectively support the margin of the classifier.
 
-![support_vectors](http://www.saedsayad.com/images/SVM_2.png)
+![support_vectors](http://www.saedsayad.com/images/SVM_2.png){: .align-center}
 
 
 ```
@@ -176,11 +178,11 @@ plt.show()
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_5_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_5_0.png){: .align-center}
 
 
-Let's view the decision boundaries predicted by various kernals, here:
-* RBF
+Let's view the decision boundaries predicted by various kernals $($a kernel is a similarity function with is passed to the SVM function$)$, here:
+* RBF $($Radial Basis Function$)$
 * Linear
 * Polynomial
 
@@ -231,7 +233,7 @@ for idx,kernel in enumerate(kernel_list):
 
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_7_1.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_7_1.png){: .align-center}
 
 
     Kernel: poly's Report
@@ -246,7 +248,7 @@ for idx,kernel in enumerate(kernel_list):
 
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_7_3.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_7_3.png){: .align-center}
 
 
     Kernel: rbf's Report
@@ -261,7 +263,7 @@ for idx,kernel in enumerate(kernel_list):
 
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_7_5.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_7_5.png){: .align-center}
 
 
 
@@ -297,30 +299,28 @@ plt.show()
 
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_8_1.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_8_1.png){: .align-center}
 
 
-You may see in the plot that some data points enter the $$forbidden$$ area according to our explanation, but complex optimization and using many constraints enable this flexibility to $$SVM$$s. Now they will be more robust to near margin noise.
+You can see in the plot that some data points have entered the forbidden area though according to our explanation this shouldn't happen. But complex optimization and using many constraints enable this flexibility to $$SVM$$s so that they will be more robust to near margin noise.
 
-Other notes on $$SVM$$ ?
+Other notes on $$SVM$$:
 
-* None training data should fall within the margin of the classifier.  
-
-* If linear assumption (as of now) is true and the previous point is also valid, then this is a _very robust_ classifier. This is because the solution ($$\beta's$$) depend only on the support vectors not on other points. So its immune to noise.  
+* If none of the training data fall within the margin of the classifier and a linear assumption $($as of now$)$ is true , then this classifier will be a _very robust_ classifier. This is because the solution ($$\beta's$$) depend only on the support vectors not on other points. So it is immune to noise.  
 
 * On the other hand if a stochastic process is generating data points and if the points fall well within the margin of the classifier. It can affect the classifier very well since we gave no allowance to any datapoints in any class to be present within the margin.   
 
-* To accommodate the noise data point (possibly) it will shrink the margin and thereby losing its robust nature.  
+* To accommodate the noisy data point $($possibly$)$ it will shrink the margin and thereby lose its robust nature.  
 
-* Classifiers that not only take support vectors, but that take the entire dataset to find the distribution will be more accurate in this case.
+* Classifiers that take not only support vectors, but those that take the entire dataset to find the distribution will be more accurate in this case.
 
 # Kernel Transformations
 
 ### What if the data is not linearly separable ?
 
-** Transform the data so that it becomes linearly separable !!!!**
+Transform the data so that it becomes linearly separable !!!!
 
-What do you mean be a transform ??
+What do you mean by a transform ??
 
 
 ```
@@ -349,16 +349,16 @@ plt.show()
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_13_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_13_0.png){: .align-center}
 
 
-Creating using this transformation,
+Now applying the following transformation,
 
 $$ \begin{equation}
 z = x^2 + y^2 = f(x,y)
 \end{equation} $$
 
-Plotting that we see one amazing thing !
+We'll be able to see something pretty amazing!
 
 
 ```
@@ -366,7 +366,7 @@ plt.plot(x_1, x_1**2 + y_1**2, 'ro', label = 'Transformed Class A')
 plt.plot(x_2, x_2**2 + y_2**2, 'go', label = 'Transformed Class B')
 plt.legend(loc = 'best')
 plt.grid(True)
-plt.title("Doesn't it seem now linearly separable ?!", fontsize = 16)
+plt.title("Doesn't it seem linearly separable now?!", fontsize = 16)
 plt.show()
 fig = plt.figure()
 ax = fig.add_subplot(111, projection = '3d')
@@ -381,7 +381,7 @@ plt.show()
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_15_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_15_0.png){: .align-center}
 
 
 ```
@@ -401,17 +401,16 @@ plt.show()
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_16_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_16_0.png){: .align-center}
 
 
-These kind of transformations can be done on the data to make it linearly separable. Such transformations are called **Kernel Transformations**. Some popular examples are,
+These kind of transformations can be done on the data to make it linearly separable. Such transformations are called **Kernel Transformations**. Some popular examples are
 
-* Polynomial Kernel $$\implies (1 + <x, x^{'}>)^d $$
-* Radial Basis Function $$\implies e^{-\gamma||x - x^{'}||^2}$$
-* Artificial Neural Network $$\implies tanh(k_1<x, x^{'}> + k_2) $$
+* Polynomial Kernel:  $$ (1 + \langle x,x^{'} \rangle )^d $$ 
+* Radial Basis Function:  $$ e^{-\gamma \|x-x^{'}\|^{2}} $$ 
+* Artificial Neural Network:  $$ tanh(k_1 \langle x, x^{'} \rangle + k_2) $$
 
 To understand how Kernel Transformations work, we will look into a simple example of Polynomial kernel.
-
 
 ```
 x1 = np.linspace(-3, 3, 5) + 0.25*np.random.randn(len(np.linspace(-3, 3, 5)))
@@ -427,7 +426,7 @@ plt.show()
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_18_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_18_0.png){: .align-center}
 
 
 ### Increasing the dimentionality of the problem, now lifting this 1-D dataset to 2-D problem by introducing a new feature...
@@ -444,4 +443,4 @@ plt.show()
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_20_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_20_0.png){: .align-center}

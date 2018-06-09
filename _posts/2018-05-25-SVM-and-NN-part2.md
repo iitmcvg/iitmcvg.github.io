@@ -13,17 +13,17 @@ This post forms the second part of the introductory material we covered during o
 ## What are they?
 Neural networks are models which behave as universal function approximators. This means that they can be used to model basically any function out there. Here we will look at an example of using them for a simple 2 class classification problem.
 
-The neural network model is composed of basic units called layers. Each layer recieves a vector as input and produces a vector output. Let the input of a layer be $$x$$, and its output $$y$$. The simplest kind of layer is a **Dense** layer. It just implements an affine transformation.
+The neural network model is composed of basic units called layers. Each layer recieves a vector as input and produces a vector output. Let the input of a layer be $$x$$, and its output $$y$$. The simplest kind of layer is a **dense** layer. It just implements an affine transformation.
 
 $$ \begin{equation}
 y = W x + b
 \end{equation} $$
 
-Note that the above equation is a matrix equation, and $$W$$ is called the weight matrix. The constant vector $$b$$ added is called the bias vecctor. Note that the weights and biases of each layer are the parameters of the model. The goal is to choose these parameters such that the total model best fits the data we have observed.
+Note that the above equation is a matrix equation, and $$W$$ is called the weight matrix. The constant vector $$b$$ added is called the bias vector. Note that the weights and biases of each layer are the parameters of the model. The goal is to choose these parameters such that the overall model best fits the data we have observed.
 
-The simplest model is composed of 1 layer. The input and output to the model are $$x$$ and $$y$$ in the above equation. If $$x$$ has a size of $$N$$, and $$y$$ has a size of $$N$$, then $$W$$ would be a $$M \times N$$ matrix.
+The simplest model is composed of 1 layer. The input and output to the model are $$x$$ and $$y$$ in the above equation. If $$x$$ has a size of $$N$$, and $$y$$ has a size of $$M$$, then $$W$$ would be a $$M \times N$$ matrix.
 
-To make models with more parameters, we can cascade Dense layers one after another. A model with two layers would look something like
+To make models with more parameters, we can cascade dense layers one after another. A model with two layers would look something like
 
 $$ \begin{equation}
 y = W_2 (W_1 x + b_1) + b_2
@@ -31,9 +31,9 @@ y = W_2 (W_1 x + b_1) + b_2
 
 Note that the number of rows of $$W_1$$ and $$b_1$$ can be chosen by us arbitrarily, because the only constraints are on the rows of $$W_2$$ and columns of $$W_1$$, corresponding to $$M$$ and $$N$$. We can add as many layers as we want which are as large or small as we want.
 
-Can you notice something off in the above discussion?
+Do you notice anything weird in the above discussion?
 
-No matter how many Dense layers you cascade, we can always simplify the model into one dense layer. So in essence, we aren't adding any new capability to the model, as its output will always be linear with the input. To fix this issue, we have introduce some form of non-linearity in the model. This is done by applying a non-linear function to the outputs of each of the layers. Let us call this function $$\sigma (z)$$. This function is called an activation function. Some commonly used activation functions are:
+No matter how many dense layers you cascade, we can always simplify the model into one dense layer. So in essence, we aren't adding any new capability to the model, as its output will always be linear with the input. To fix this issue, we have introduced some form of non-linearity in the model. This is done by applying a non-linear function to the outputs of each of the layers. Let us call this function $$\sigma (z)$$. This function is called an activation function. Some commonly used activation functions are:
 
 * The sigmoid activation: $$\sigma (z) = \frac{1}{1+e^{-z}}$$
 * The hyperbolic tangent: $$\sigma (z) = \tanh (z)$$
@@ -47,19 +47,21 @@ y = \sigma(W_2 \sigma(W_1 x + b_1) + b_2)
 \end{equation} $$
 
 
-Now, we have the ability to tweak the numerous parameters in the weight matrices and bias vectors to make the function from $$x$$ to $$y$$ look like almost anything we want. The more number of parameters we have to tweak, in general, will give us more control over how the total function looks. But too many parameters will not only make it slower to compute with, but can also cause overfitting, a problem which we will deal with later. The factors of the neural network like the number of layers, how large the output of each individual layer is, and which activation function to use for each layer are called **hyperparameters**.
+Now, we have the ability to tweak the numerous parameters in the weight matrices and bias vectors to make the function from $$x$$ to $$y$$ look like almost anything we want. The more number of parameters we have to tweak, in general, will give us more control over how the total function looks. But too many parameters will not only make the computation slower, but can also cause overfitting, a problem which we will deal with later. The parameters of the neural network like the number of layers, how large the output of each individual layer is, and which activation function to use for each layer are called **hyperparameters**.
 
-But why are these types of models called neural networks anyway? Well, we can interpret the model with a finer resolution. The values of vectors can be thought of as the outputs of small computational units called neurons. The neurons in the output of a dense layer can be thought of as units which multiply each of the incoming inputs by a corresponding weight and then adding them all up along with a bias. Then, an activation is applied to this sum. The neuron then sends this value as its output. We can then represent our 2 layer model with the figure below:
+But why are these types of models called neural networks anyway? Well, we can interpret the model with a finer resolution. The values of vectors can be thought of as the outputs of small computational units called neurons. The neurons in the output of a dense layer can be thought of as units which multiply each of the incoming inputs by a corresponding weight and then add them all up along with a bias. Then, an activation is applied to this sum. The neuron then sends this value as its output. We can then represent our 2 layer model with the figure below:
 
-![nn](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Colored_neural_network.svg/300px-Colored_neural_network.svg.png)
+![nn](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Colored_neural_network.svg/300px-Colored_neural_network.svg.png){: .align-center}
 
 You can think of the two sets of arrows as the two weight matrices $$W_1$$ and $$W_2$$. This interpretation of the model draws analogies with how the brain works. The brain is supposedly an interconnected network of neurons whose electrical activations depend on the excitations given to them through the connections with other neurons. However, that's as far as this analogy gets.
 
 ## 'Training' a neural network
 
-Ok, so now that we have a model which can more or less approximate any function we want, how do we set the weights of our model to fit the function which we want (this job is called training the model)? First, we need a measure of how good of a fit a particular set of weights will result in. We can evaluate this measure by comparing the outputs of the model to some inputs with the actual outputs we want. The set of inputs and outputs which we already have is called the **dataset**. So, the dataset can be represented as $$(x_i,y_i)$$. Suppose our model gives the output $$y'_ i$$ when given an input $$x_i$$. Ideally, $$y'_i = y_ i$$ for all $$i$$. But this will never be the case. So we have to look at how $$y_i$$ and $$y'_ i$$ differ. We can define a **loss** function on $$y_i$$ and $$y'_ i$$ which outputs one number representing how far away the two vectors are from each other. Our goal would then be to minimize the sum of this loss function **over all the points in our dataset** by varying the weights and biases of the network. Our job of training the network is now reduced to an optimization problem.  We solve this problem using the following approach. We find the output of the network to all the inputs from the dataset and evaluate the total loss using the outputs. We then find the **gradient** of the loss function with respect to ALL the parameters in the network. Then, we tweak the parameters to move in the opposite direction of the gradient so as to reduce the loss. We then repeat this process many times over all our samples until we reach a minimum in the loss.
+Ok, so now that we have a model which can more or less approximate any function we want, how do we set the weights of our model to fit the function which we want $($this job is called training the model$)$. First, we need a measure of how good of a fit a particular set of weights will result in. We can evaluate this measure by giving our model some inputs and comparing the outputs of the model to the actual outputs we want. The set of inputs and outputs which we already have is called the **dataset**. So, the dataset can be represented as $$(x_i,y_i)$$. Suppose our model gives the output $$y'_ i$$ when given an input $$x_i$$. Ideally, $$y'_i = y_ i$$ for all $$i$$. But this will never be the case. So we have to look at how $$y_i$$ and $$y'_ i$$ differ. We can define a **loss** function on $$y_i$$ and $$y'_ i$$ which outputs one number representing how far away the two vectors are from each other. Our goal would then be to minimize the sum of this loss function **over all the points in our dataset** by varying the weights and biases of the network. Our job of training the network is now reduced to an optimization problem. 
 
-There are a whole host of tasks in the above paragraph. They are as follows:
+ We solve this problem using the following approach. We find the output of the network to all the inputs from the dataset and evaluate the total loss using the outputs. We then find the **gradient** of the loss function with respect to ALL the parameters in the network. Then, we tweak the parameters to move in the opposite direction of the gradient so as to reduce the loss. We then repeat this process many times over all our samples until we reach a minimum in the loss.
+
+There are a whole list of tasks in the above paragraph. They are as follows:
 
 * What loss function to use?
 
@@ -67,18 +69,19 @@ There are a whole host of tasks in the above paragraph. They are as follows:
 
 * Suppose we could do the above, how much along the gradient should we move, and how are we sure that we will reach a global minimum?
 
-* Finding the outputs and gradients each time for ALL the data points would be extremely slow, is there anything better we can do?
+* Finding the outputs and gradients each time for all the data points would be extremely slow, is there anything better we can do?
 
 Here are some short answers without detail, as these problems are not trivial.
 
-* This depends on what type of function you are trying to approximate.
+* The type of loss function we choose depends on what type of function we are trying to approximate.
 
-* This is done using an ingenious algorithm called **backpropagation**. It is basically a repeated application of the chain rule.
+* Finding the gradient with respect to all these parameters is done using an ingenious algorithm called **backpropagation**. It is basically a repeated application of the chain rule.
 
-* In short, we aren't sure that it will reach a global minimum. But it turns out in practice that a local minimum is pretty good too. How much to move along the gradient is basically another hyperparameter.
-* We can solve this by just going through a small part of the data before each parameter update. This is called batching the data.
+* We can't always be sure that we will reach a global minimum. But it turns out in practice that a local minimum is pretty good too. Also how much to move along the gradient in each step is another hyperparameter called the **learning rate**.
 
-We won't go over the details of backprop in this session, as it takes a while to digest, but we will instead implement a neural network and train it.
+* To reduce computation we 'batch' the data. For each parameter update we will now only use a part $($a batch$)$ of the data and not the entire dataset.
+
+We won't go over the details of backpropagation in this post, as it takes a while to digest, but we will instead implement a neural network and train it.
 
 Our input is going to be a vector of size 2. The task is to classify this input into two classes. The two classes are given by two probability distributions  over the 2D plane as shown below. They are radial gaussians with different means. The dataset which we use for training will be sampled from these distributions.
 
@@ -105,7 +108,7 @@ plt.show()
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_23_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_23_0.png){: .align-center}
 
 
 
@@ -115,10 +118,10 @@ plt.show()
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_24_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_24_0.png){: .align-center}
 
 
-These distributions are the ones from which we will sample our data. In reality, we will have access only to the sampled data, and won't have knowledge of these distributions. Also, most of the data in the real world won't be simply 2 dimensional. Images for example are data points in very high dimensional space, with around 1000 independent dimensions. Keep these two points in mind while following this example.
+These distributions are the ones from which we will sample our data. In reality, we will have access to only our the sampled data, and won't have knowledge of these distributions. Also, most of the data in the real world won't simply be 2 dimensional. Images for example are data points in very high dimensional space, with around 1000 independent dimensions. Keep these two points in mind while following this example.
 
 
 ```
@@ -162,7 +165,7 @@ samples2 = sample2d(xr,xr,p2,500)
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_27_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_27_0.png){: .align-center}
 
 
 This is our set of sampled data. The colours represent the classes of the two sets of data.
@@ -184,14 +187,14 @@ from livelossplot import PlotLossesKeras
 ```
 
 # The model
-The neural network which we are building is a very small one. It has 3 hidden layers, with $$tanh$$ activations and an output layer with a softmax activation. The softmax activation is defined as follows:
+The neural network which we are building is a very small one. It has 3 hidden layers, with **tanh** activations and an output layer with a softmax activation. The softmax activation is defined as follows:
 
 
 $$ \begin{equation}
 y_i = \frac{e^{z_i}}{\sum_{j=0}^N e^{z_j}}
 \end{equation} $$
 
-Where $$y_i$$ represents the $$i^{th}$$ element of the output vector. This is the output activation we use for classification tasks, as the values of the output can be interpreted as class probabilities. The loss function to use for classification tasks is called the _cross entropy_ loss. The loss for binary classification is as follows:
+Where $$y_i$$ represents the $$i^{th}$$ element of the output vector. This is the output activation we use for classification tasks, as the values of the output can be interpreted as class probabilities. The loss function to use for classification tasks is called the **cross entropy loss**. The loss for binary classification is as follows:
 
 $$ \begin{equation}
 −(ylog(p)+(1−y)log(1−p))
@@ -254,7 +257,7 @@ history = model.fit(train_data,labels,epochs=150,callbacks=[PlotLossesKeras(dyna
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_37_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_37_0.png){: .align-center}
 
 
 
@@ -307,7 +310,7 @@ lay2 = Model(inputs=inp,outputs=layer2)
 presoft = Model(inputs=inp,outputs=presoftmax)
 ```
 
-Let's plot the first component of the output for each point on the x-y plane. This is basically the model's prediction of the probability of the point belonging to the first class(the gaussian with smaller radius).
+Let's plot the first component of the output for each point on the x-y plane. This is basically the model's prediction of the probability of the point belonging to the first class $($the gaussian with smaller radius$)$.
 
 
 ```
@@ -315,7 +318,7 @@ plotModelOut(x,y,model)
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_42_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_42_0.png){: .align-center}
 
 
 Let's look at the maps of the hidden layers. The following is the input we give to the model:
@@ -326,7 +329,7 @@ plotModelGrid(x,y)
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_44_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_44_0.png){: .align-center}
 
 
 The second layer maps the points with the corresponding colour to the following points:
@@ -337,7 +340,7 @@ plotModelGrid(x,y,lay1)
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_46_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_46_0.png){: .align-center}
 
 
 The third layer as follows:
@@ -359,12 +362,12 @@ plotModelGrid(x,y,presoft)
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_50_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_50_0.png){: .align-center}
 
 
 # Outliers and overfitting
 
-If we have too few samples, and a too big network, the model is extremely sensitive to outliers. This means that the model will try its best to accomodate all the datapoints, which are few in number, and will overfit to these points. This is possible because the large number of parameters in the network give it a lot of capacity.
+If we have too few samples, and too big a network, the model is extremely sensitive to outliers. This means that the model will try its best to accomodate all the datapoints, which are few in number, and will overfit these points. This is possible because the large number of parameters in the network give it a lot of flexibility.
 
 
 ```
@@ -410,7 +413,7 @@ labels2 = np.concatenate((np.tile(l1,(samples1_2.shape[0],1)),np.tile(l2,(sample
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_53_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_53_0.png){: .align-center}
 
 
 
@@ -419,7 +422,7 @@ history = model2.fit(train_data2,labels2,epochs=150,callbacks=[PlotLossesKeras(d
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_54_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_54_0.png){: .align-center}
 
 
 
@@ -430,14 +433,14 @@ plotModelOut(x_,y_,model2)
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_55_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_55_0.png){: .align-center}
 
 
 ## Linear Algebra Intuition
 
 ## What does Multiplying a Matrix with a Column Vector do?
 
-Lets assume a matrix $$\boldsymbol{A}$$ of size $$N*N$$, a column vector $$\boldsymbol{x}$$ of size $$N*1$$.
+Lets assume we have a matrix $$\boldsymbol{A}$$ of size $$N*N$$ and a column vector $$\boldsymbol{x}$$ of size $$N*1$$.
 
 
 $$ \begin{equation}
@@ -485,7 +488,7 @@ x_3
 a_1x_1 + a_2x_2 + a_3x_3 \\
 b_1x_1 + b_2x_2 + b_3x_3 \\
 c_1x_1 + c_2x_2 + c_3x_3
-\end{bmatrix} =
+\end{bmatrix} \\ = 
 \begin{bmatrix}
   x_1
   \begin{pmatrix}
@@ -508,13 +511,12 @@ c_1x_1 + c_2x_2 + c_3x_3
 \end{bmatrix}
 \end{equation} $$
 
-So multiplying a matrix with a column vector returns a vector which is a linear combination of its column vectors (as shown above).
+So multiplying a matrix with a column vector returns a vector which is a linear combination of its column vectors $($as shown above$)$.
 
 * $$C(A) = $$ It denotes the column space of the matrix $$A$$. Column space is the span of all the column vectors of Matrix $$A$$.
 
-
 \\
-$$Intuitively,\ what\ does\ it\ do?$$
+Intuitively, what does it do?
 
 
 ```
@@ -548,7 +550,6 @@ y = bsin(\theta)\\
 \theta\  \epsilon\ [0,2\pi]
 \end{equation} $$
 
-\\
 
 We will use this to plot an ellipse and apply transformations to these coordinates and see the transforms and try to gain intuitions.
 
@@ -572,10 +573,10 @@ plt.show()
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_62_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_62_0.png){: .align-center}
 
 
-Lets define a $$2-D\ Matrix\ A$$
+Lets define a 2-D Matrix A
 
 $$ \begin{equation}
 A =
@@ -587,7 +588,7 @@ sin\theta & cos\theta
 
 Remember distantly what this matrix does?
 
-Its a Rotating Matrix, which rotates the space without scaling the space. We will see the meanings of these terms shortly.
+Its a Rotation Matrix, which rotates the space without scaling the space. We will see the meanings of these terms shortly.
 
 $$ \begin{equation}
 Ax =
@@ -609,7 +610,8 @@ y^{'}
 \end{bmatrix}
 \end{equation} $$
 
-Whats the **determinant** of this Rotation Matrix??
+Whats is the **determinant** of this Rotation Matrix??
+
 $$ \begin{equation}
 |A| =
 \begin{vmatrix}
@@ -620,17 +622,19 @@ cos^{2}\theta + sin^{2}\theta = 1
 \end{equation} $$
 
 *Determinants* are related to the volume change during matrix transformation.
-  * $$|A| = 1$$ => Volume of any closed surface in the space is conserved. The distortion caused by matrix in the space is preserving volume. No closed surface expands or contracts in this transform.
 
-  * $$|A| > 1$$ => Volume of any closed surface in space increases.
+  *  \| A \|  = 1 would mean that the volume of any closed surface in the space is conserved. The distortion caused by matrix in the space is preserving volume. No closed surface expands or contracts in this transform.
 
-  * $$|A| = 0$$ => Closed surface volume reduces to 0.
-![rotaion_description](http://jcsites.juniata.edu/faculty/rhodes/graphics/images/rotate1.gif)
+  *  \| A \| > 1 would mean that the volume of any closed surface in space increases.
+
+  *  \| A \| = 0 would mean that the closed surface volume reduces to 0.
+
+![rotaion_description](http://jcsites.juniata.edu/faculty/rhodes/graphics/images/rotate1.gif){: .align-center}
 
 This image describes the why this matrix is called **Rotation matrix** in 2D.
 
 If the input column vector $$x$$ is taken to represent coordinates of a point in 2D space, then after
-doing the transformation ((i.e) multiplying with matrix $$A$$),
+doing the transformation $($ $(i.e)$ multiplying with matrix $$A$$ $)$,
 
 We get the rotated point represented as $$[x^{'}, y^{'}]$$ in this image.
 
@@ -663,16 +667,16 @@ plt.show()
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_66_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_66_0.png){: .align-center}
 
 
 Observations:
 
-* Entire Ellipse (Represented in blue) is rotated with respect to the initial ellipse (green one) by the angle $$\theta$$ we specified the program.
+* Entire Ellipse $($Represented in blue$)$ is rotated with respect to the initial ellipse $($green one$)$ by the angle $$\theta$$ we specified the program.
 
 Inferences:
 
-* Matrix rotate the space. (If Rotation is only desired, keep the determinant 1)
+* This kind of matrix rotate the space. $($If only rotation is desired, keep the determinant 1$)$
 
 
 ```
@@ -696,7 +700,7 @@ plt.show()
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_69_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_69_0.png){: .align-center}
 
 
 Now, lets take this matrix and study its transform abilities.
@@ -710,8 +714,6 @@ A =
 \end{equation} $$
 
 Whats the determinant of this matrix?
-
-\\
 
 $$ \begin{equation}
 |A| =
@@ -757,13 +759,13 @@ This streches the space along x direction, preserving y direction.
 
 ## Eigen Decomposition
 
-An ** *Eigenvector* ** of a square matrix $$\boldsymbol{A}$$ is  a non-zero vector $$\boldsymbol{v}$$ such that transformation by $$\boldsymbol{A}$$ (multiplication by $$\boldsymbol{A}$$) only scales the vector $$\boldsymbol{v}$$ by a factor $$\boldsymbol{\lambda}$$ which is its ** *EigenValue* **.
+An **Eigenvector** of a square matrix $$\boldsymbol{A}$$ is  a non-zero vector $$\boldsymbol{v}$$ such that transformation by $$\boldsymbol{A}$$ (multiplication by $$\boldsymbol{A}$$) only scales the vector $$\boldsymbol{v}$$ by a factor $$\boldsymbol{\lambda}$$ which is its ** *EigenValue* **.
 
 $$ \begin{equation}
 \boldsymbol{A}v = \lambda v
 \end{equation} $$
 
-So, if we find **eigenvectors** of matrix $$A$$, we can say that those directions are the directions that will be only **scaled** by the transformation by this matrix (Scaled by its eigenvalue). All the other directions other than eigenvector directions, will be **both** scaled and rotated, to maintain **continuity of the transformation**.
+So, if we find **eigenvectors** of matrix $$A$$, we can say that those directions are the directions that will be only **scaled** by the transformation by this matrix $($scaled by its eigenvalue$)$. All the other directions other than eigenvector directions, will be **both** scaled and rotated, to maintain **continuity of the transformation**.
 
 If $$\boldsymbol{v}$$ is an eigenvector of $$\boldsymbol{A}$$, and has an eigenvalue $$\lambda$$, whats the eigenvalue of $$c\boldsymbol{v}$$, c is a constant?
 
@@ -796,21 +798,21 @@ diag(\lambda) =
 \end{equation} $$
 
 
-Then matrix $$\boldsymbol{A}$$ can be reconstructed from these matrices $$\boldsymbol{V}$$ and $$\boldsymbol{diag(\lambda)}$$ using $$\boldsymbol{Eigendecomposition}$$ of $$\boldsymbol{A}$$, which is given by,
+Then matrix $$\boldsymbol{A}$$ can be reconstructed from these matrices $${V}$$ and $${diag(\lambda)}$$ using **eigendecomposition** of **A**, which is given by,
 
 $$ \begin{equation}
-\boldsymbol{A} = \boldsymbol{V}diag\boldsymbol{(\lambda)}\boldsymbol{V}^{-1}
+ {A} = {V}diag{(\lambda)}{V}^{-1}
 \end{equation} $$
 
 Whats the use of this???
 
-* We can *construct* matrix with specific **eigenvectors** and **eigenvalues** that allows us to stretch the space in desired directions.
-* We can design specific matrices that can distort the space in such a way that data becomes easily separable so that our classifier can separate the data easily. ** Now you get the point of why we did  all this !!! **
+* We can construct a matrix with specific **eigenvectors** and **eigenvalues** that allows us to stretch the space in desired directions.
+* We can design specific matrices that can distort the space in such a way that data becomes easily separable so that our classifier can separate the data easily. **Now you can understand the point of doing all this !!!**
 
-We want to create matrix that can distort the space in such a way that we want our data to get sepatated.
+We want to create a matrix that can distort the space in such a way that we want our data to get sepatated.
 
-* ** Neural Nets distort the input data in high dimentional space using these matrix multiplications, (Apply activations in middle), until the data becomes linearly separable.**
-* ** This distortions can be analysed by eigendecomposition and singular value decomposition of weight matrices of the layers of Deep neural nets.**
+* Neural Nets distort the input data in high dimentional space using these matrix multiplications, $($apply activations in middle$)$, until the data becomes linearly separable.
+* These distortions can be analysed by eigendecomposition and singular value decomposition of weight matrices of the layers of deep neural nets.
 
 
 ```
@@ -836,7 +838,7 @@ plt.show()
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_74_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_74_0.png){: .align-center}
 
 
 
@@ -867,7 +869,7 @@ w_1, v_1, y_matrix_1 = eigen_decomposition(A, x_c, y_c)
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_76_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_76_0.png){: .align-center}
 
 
 
@@ -882,13 +884,13 @@ w_2, v_2, y_matrix_2 = eigen_decomposition(A, x_c, y_c)
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_78_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_78_0.png){: .align-center}
 
 
 Obseravtions:
 
-* The vectors near to eigenvectors donot rotate that much. They get scaled by the eigenvalue (if its an eigenvector, else a small rotation is present).
-* Vectors that are far away from either of the eigenvectors are severly rotated and scaled. (Maintain the continuity of the figure)
+* The vectors near to eigenvectors do not rotate that much. They get scaled by the eigenvalue $($if its an eigenvector, else a small rotation is present$)$.
+* Vectors that are far away from either of the eigenvectors are severly rotated and scaled. $($Maintain the continuity of the figure$)$
 * Volume has increased greater than the initial circle, which indicates that the determinant of the matrix is greater than 1.
 
 
@@ -898,30 +900,30 @@ w_2b, v_2b, y_matrix_2b = eigen_decomposition(A, x_c, y_c, bias = bias)
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_80_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_80_0.png){: .align-center}
 
 
 Observations:
 
-* Other than other observations (listed in the previous plot), we can see the bias has just shifted the distorted figure along that direction (bias vector's direction).
+* Other than other observations $($listed in the previous plot$)$, we can see the bias has just shifted the distorted figure along that direction $($bias vector's direction$)$.
 
-So we get the answer of why bias is needed?
+So we now know why bias is needed
 
-This is because, if bias is not added we are restricted with origin as center. Its similar to
+This is because, if bias is not added we are restricted with origin as center. It is similar to
 
 $$ \begin{equation}
 y = mx + b
 \end{equation} $$
 
-where b acts as a bias. If $$b = 0$$, we will be restricted to use only lines which pass through origin.
+where b acts as a bias. If $$b = 0$$, we will be restricted to only use lines which pass through origin.
 
 $$ \begin{equation}
 y = mx
 \end{equation} $$
 
-So addition of bias gives **extra freedom** to move anywhere in the space ($$translation$$), multiplying with the weight matrix enables the model to $$distort$$, $$scale$$, $$rotate$$ the space (with center at $$origin$$) the space.
+So addition of bias gives **extra freedom** to move anywhere in the space $($translation$)$ and multiplying with the weight matrix enables the model to distort, scale, or rotate the space $($with center at origin$)$ the space.
 
-So Neural Net basicaly $$moves$$ (bias), $$distorts$$ data points by $$scaling$$ and $$rotating$$ them (weights) in hyperdimentional space, **with an aim to find a transformation to make the data linearly separable at the end**.
+So Neural Net basicaly **traanslates** $($due to the bias$)$, **distorts** data points by scaling and rotating them $($weights$)$ in hyperdimentional space, **with an aim to find a transformation to make the data linearly separable at the end**.
 
 
 ```
@@ -936,7 +938,7 @@ w_3, v_3, y_matrix_2 = eigen_decomposition(A, x_c, y_c)
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_83_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_83_0.png){: .align-center}
 
 
 Observation:
@@ -964,17 +966,17 @@ w_4, v_4, y_matrix_4 = eigen_decomposition(A_minus, x, y)
 ```
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_86_0.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_86_0.png){: .align-center}
 
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_86_1.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_86_1.png){: .align-center}
 
 
-When Determinant is less than zero we get a reflection about y axis but the deformation is same (except the reflection)
+When Determinant is less than zero we get a reflection about y axis but the deformation is same $($except the reflection$)$
 
 
-## Enough of theory! Lets have an hands on seesion how to implement neural networks !
+## Enough of theory! Lets have an hands on seesion how to implement neural networks!
 
 
 ```
@@ -1023,7 +1025,7 @@ plt.title("Ground Truth : {}".format(test_labels[0]))
 
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_89_2.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_89_2.png){: .align-center}
 
 
 
@@ -1163,18 +1165,18 @@ plt.title('Accuracy Curves',fontsize=16)
 
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_97_1.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_97_1.png){: .align-center}
 
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_97_2.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_97_2.png){: .align-center}
 
 
-## There is a clear sign of OverFitting. Why do you think so?
+## There is a clear sign of Overfitting. Why do you think so?
 
 Carefully see the Validation loss and Training loss curve. Validation loss decreases and then it gradually increases. This means that model is memorising the dataset, though in this case accuracy is much higher.
 
-** How to combat that?? **
+**How to combat this??**
 # Use Regularization !
 
 
@@ -1265,11 +1267,11 @@ plt.title('Accuracy Curves',fontsize=16)
 
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_100_2.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_100_2.png){: .align-center}
 
 
 
-![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_100_3.png)
+![png](/assets/images/posts/SVM_and_Neural_Nets/SVM_and_Neural_Nets_100_3.png){: .align-center}
 
 
 ## What we note??
@@ -1277,7 +1279,7 @@ plt.title('Accuracy Curves',fontsize=16)
 * Validation loss is not increasing as it did before.
 * Difference between the validation and training accuracy is not that much
 
-This implies better generalisation and can work will on unseen data samples.
+This implies better generalisation and can work well on new unseen data samples.
 
 
 ## Time to train your own neural network !!!
@@ -1424,4 +1426,4 @@ print("Evaluation result on Test Data : Loss = {}, accuracy = {}".format(test_lo
     Evaluation result on Test Data : Loss = 1.4804802495956422, accuracy = 0.4701
 
 
-_Try to maximize your test accuracy !!! Take it as a challenge. (Tuning parameters is an art :P)_
+**Try to maximize your test accuracy!!! Take it as a challenge. $($Tuning parameters is an art :P$)$**
