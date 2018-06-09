@@ -137,7 +137,7 @@ $$ \begin{equation}
 
 Assuming that the data is distinctly separated and a nice line can be drawn to separate it.
 
-Solving this optimization problem $($We will not go into the details here$)$ we will get $$\beta_0, \beta_{n \times 1}$$ which represents the optimal separating hyperplane with maximum margin.
+Solving this optimization problem (We will not go into the details here) we will get $$\beta_0, \beta_{n \times 1}$$ which represents the optimal separating hyperplane with maximum margin.
 
 Note that in the way in which we have formulated this optimization problem, we are maximizing the margin without allowing $($strictly$)$ any data points inside that margin. $($No Tolerence whatsoever$)$
 
