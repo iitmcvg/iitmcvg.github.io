@@ -28,7 +28,7 @@ The answer to this question is to define an **Optimal Separating Hyperplane**.
 
 ## What is an Optimal Separating Hyperplane?
 
-It is a surface defined such that the nearest data point to the surface is _as far away as possible_ from it $($as compared to other surfaces$)$ .
+It is a surface defined such that the nearest data point to the surface is _as far away as possible_ from it $($ as compared to other surfaces $)$ .
 
 * The nearest data point need not belong to just one class.
 
