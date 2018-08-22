@@ -1,16 +1,109 @@
 ---
-layout: home
+layout: splash
 author_profile: true
 
-title: "Computer Vision and Intelligence"
+title: <img src="/assets/banner_avatar.png" width="800" height="600"> 
 
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: assets/images/CVI.jpg
+  overlay_image: https://dabarti.com/wp-content/uploads/2016/03/DSC00371.jpg
   cta_label: "Blog"
   cta_url: "/year-archive/"
 excerpt: "We harness <b>Artificial Intelligence</b> to make robust and sustainable solutions for problems in society."
 intro:
-  - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'
+  - excerpt: <big>What do we do?</big>
+
+feature_row:
+  - image_path: http://people.inf.ethz.ch/schoepst/images/3dv-image-2.png
+    alt: "SLAM image"
+    title: "Projects"
+    excerpt: "We broadly undertake two kinds of projects: one to expand the horizons of current research and, two to use present technology to create visible impact in real world problems. The areas of our projects include Pattern Recogntion - Deep learning, autonomous mapping and navigation, reinforcement agents, as well as a few subsets of computational photography."
+    url: "/projects/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - image_path: https://scontent-maa2-1.xx.fbcdn.net/v/t1.0-9/39008876_2015575665141391_3015078414865399808_o.jpg?_nc_cat=0&oh=68a526ca72843e30068beca88b4ded66&oe=5C0B5954
+    alt: "Session image"
+    title: "Sessions"
+    excerpt: "We undertake over numerous peer-teaching based sessions in IIT Madras over the year, attended by an audience of over 200, where we engage in sharing know-how in the fields of Computer Vision and Artificial Intelligence. Besides this, we have also conducted workshops outside IIT Madras and have been invited to python conferences."
+    url: "/sessions/"
+    btn_label: "Session Lists"
+    btn_class: "btn--primary"
+  - image_path: "/assets/images/about/utils_base.png"
+    alt: "Utils image"
+    title: "OpenSource Codebase"
+    excerpt: "You can find a good proportion of our codebase on github. Read up on our documentation guide for specifics."
+    url: "https://github.com/iitmcvg"
+    btn_label: <i class="fa fa-github" aria-hidden="true"></i> Github
+    btn_class: "btn--github"
+
+who_we_are:
+  - excerpt:  <big>We began as a small group in September 2009 with a vision of building a team of students with  expertise in Computer Vision.</big>
+
+feature_row2:
+  - image_path: /assets/images/about/IARC.jpg
+    alt: "placeholder image 1"
+    title: "Our Inception"
+    excerpt: "The idea for the formation of such a club was seeded in 2008 when the IIT Madras team had represented India at the International Aerial Robotics Competition (IARC). CVI which competed against elite teams, from other top Universities in IARC 2009, was acknowledged as the best vision team among all the participating teams."
+  - image_path: /assets/images/about/HV.jpg
+    alt: "placeholder image 2"
+    title: "A Unique History"
+    excerpt: 'Being the only IIT Madras technical club out of which a start-up has grown, CVI has extraordinary mentorship and motivated and committed members, who have completed Industrial Projects by ITC, The Indian Railways, VDime, Eye hospital CHECK and multiple machine learning projects.'
+  - image_path: /assets/images/about/team.jpg
+    alt: "placeholder image 2"
+    title: "At Present"
+    excerpt: 'As a club, we undertake projects ranging about topics from computer vision, deep learning, reinforcement learning and natural language processing. We are actively involved in projects and conduct sessions among our college community in these areas: with the hope of impacting society with bleeding edge technology.'
+    
+
+achievements:
+  - excerpt: <big>Our achievements over the years.</big>
+  
+feature_row3:
+  - image_path: /assets/images/about/competitions.png
+    alt: "competitions"
+    title: "Competitions"
+  - image_path: /assets/images/about/industrial.png
+    alt: "industrial"
+    title: "Industrial Projects"
+  - image_path: /assets/images/about/confs.png
+    alt: "conferences"
+    title: "Conferences"
+    
+contact:
+  - excerpt: <big>Contact Us.</big>
+feature_row4:
+  - image_path: 
+    alt: ""
+    title: ""
+    url: "mailto:cvigroup.cfi@gmail.com"
+    btn_label: "Drop us a mail"
+    btn_class: "btn--primary"
+  - image_path: 
+    alt: ""
+    title: ""
+    url: "https://www.facebook.com/iitmcvi/"
+    btn_label: <i class="fa fa-facebook" aria-hidden="true"></i> Facebook Page
+    btn_class: "btn--facebook"
+  - image_path: 
+    alt: ""
+    title: ""
+    url: "https://twitter.com/iitmcvg"
+    btn_label: <i class="fa fa-twitter" aria-hidden="true"></i> Twitter Handle
+    btn_class: "btn--twitter"
 ---
+
+{% include feature_row id="intro" type="center" %}
+
+{% include feature_row %}
+
+{% include feature_row id="who_we_are" type="center" %}
+
+{% include feature_row id="feature_row2" %}
+
+{% include feature_row id="achievements" type="center" %}
+
+{% include feature_row id="feature_row3" type="center" %}
+
+{% include feature_row id="contact"  type="center" %}
+
+{% include feature_row id="feature_row4" %}

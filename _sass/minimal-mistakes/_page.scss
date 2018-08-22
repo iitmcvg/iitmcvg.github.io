@@ -17,7 +17,13 @@
 
   @include breakpoint($x-large) {
     max-width: $x-large;
-  }
+  } 
+  
+}
+
+.gist-data{
+  height:250px; // Any height
+  overflow-y: visible;
 }
 
 .page {

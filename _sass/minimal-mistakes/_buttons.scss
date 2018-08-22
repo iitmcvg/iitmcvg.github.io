@@ -40,7 +40,8 @@
   (facebook, $facebook-color),
   (twitter, $twitter-color),
   (google-plus, $google-plus-color),
-  (linkedin, $linkedin-color);
+  (linkedin, $linkedin-color),
+  (github, $github-color);
   /*(whatsapp, #128c7e);*/
 
   @each $buttoncolor, $color in $buttoncolors {

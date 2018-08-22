@@ -9,15 +9,14 @@ classes:
 header:
   #overlay_color: "#000"
   overlay_filter: rgba(255, 0, 0, 0.5)
-  overlay_image: assets/images/CVI.jpg
+  overlay_image: https://finbrain.tech/blog/wp-content/uploads/2018/08/NeuralNet-min-2000x1200.jpg
   cta_label: "Contact Us"
   cta_url: "/contact/"
-  caption: "Photo credit: Ayush, IIT-Madras."
 excerpt: "
 
 "
 intro:
-  - excerpt: 'We began as a small group on September 2009 with a vision of building a team of students with  expertise in Computer Vision.'
+  - excerpt: 'We began as a small group in September 2009 with a vision of building a team of students with  expertise in Computer Vision.'
 feature_row:
   - image_path: /assets/images/about/IARC.jpg
     alt: "placeholder image 1"

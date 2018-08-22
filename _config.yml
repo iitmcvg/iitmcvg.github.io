@@ -89,7 +89,7 @@ analytics:
 # Site Author
 author:
   name             : "Computer Vision and Intelligence"
-  avatar           : "/assets/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/author_avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "We teach computers to see."
   location         : "IIT Madras"
   email            : "cvigroup.cfi@gmail.com"
@@ -114,7 +114,7 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          :
+  twitter          : "iitmcvg"
   vine             :
   weibo            :
   xing             :
@@ -266,7 +266,7 @@ defaults:
       path: ""
       type: posts
     values:
-
+      toc: true
       layout: single
       author_profile: true
       read_time: true
