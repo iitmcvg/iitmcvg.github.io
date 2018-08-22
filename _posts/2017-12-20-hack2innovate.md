@@ -2,6 +2,7 @@
 title: "Hack2Innovate"
 categories:
   - media coverage
+  - competitions
 description: "Our experience at GES 2017, in association with T-Hub and NITI-Aayog."
 header:
   teaser: /assets/images/posts/2017-12-20-hack2innovate/GES.jpeg
