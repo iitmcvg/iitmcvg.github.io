@@ -18,7 +18,7 @@ Date: 12th May 2018.
 4. [ ] Update projects and documentation.
 5. [x] Add contribution guidelines
 6. [ ] Update a Travis CI build status.
-7. [x] MathJax support for equations.
+7. [x] MathJax support for equations. >> Moved to cdnjs. See [here](https://www.mathjax.org/cdn-shutting-down/)
 8. [ ] Google Insight Optimisation: we currently score a 90.
 9. [x] Setup scripts and Ipynb converter.
 

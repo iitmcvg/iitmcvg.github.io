@@ -266,6 +266,7 @@ defaults:
       path: ""
       type: posts
     values:
+
       layout: single
       author_profile: true
       read_time: true
@@ -279,6 +280,7 @@ defaults:
       path: ""
       type: pages
     values:
+      classes: wide
       layout: single
       author_profile: true
       comments: true
