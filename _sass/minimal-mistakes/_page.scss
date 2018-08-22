@@ -20,6 +20,11 @@
   }
 }
 
+.gist-data{
+  height:250px; // Any height
+  overflow-y: visible;
+}
+
 .page {
   @include breakpoint($large) {
     float: right;

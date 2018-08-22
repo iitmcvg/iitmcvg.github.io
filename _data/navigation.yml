@@ -2,16 +2,16 @@
 main:
   #- title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  - title: "Home"
-    url: "/"
+  #- title: "Home"
+  #  url: "/"
 
   - title: "About"
     url: "/about/"
 
-  - title: "Forums"
-    url: "/forums/"
+ # - title: "Forums"
+    #url: "/forums/"
 
-  - title: "Posts"
+  - title: "Blog"
     url: "/year-archive/"
 
   - title: "Projects"
@@ -22,11 +22,11 @@ main:
     - title: "Ongoing Projects"
       url: "/ongoing-projects/"
 
-  - title: "Documentation"
+  - title: "Docs"
     url: "/documentation/"
 
-  - title: "Contributing"
-    url: "/contributing/"
+  #- title: "Contributing"
+  #  url: "/contributing/"
 
   - title: "Contact Us"
     url: "/contact/"

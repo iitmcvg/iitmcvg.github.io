@@ -4,6 +4,7 @@ layout: single
 permalink: "/about/"
 date: 2018-01-10
 classes:
+  - wide
   - landing
   - dark-theme
 header:
