@@ -14,7 +14,7 @@ remote_theme: "mmistakes/minimal-mistakes"
 # Site Settings
 locale                   : "en-GB"
 title                    : "CVI"
-title_separator          : "-"
+title_separator          : " "
 name                     : "Computer Vision Intelligence"
 description              : "Official site for CVI-IIT Madras"
 url                      : "https://iitmcvg.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
