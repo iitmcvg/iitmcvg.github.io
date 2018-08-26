@@ -16,7 +16,9 @@ author_profile: true
 
 _Author: Rajat V D_
 
-_This post was reposted on medium at <a href="https://medium.com/@cvigroup.cfi/exploring-adversarial-reprogramming-c9e14bf3236a" class="btn btn--success" ><i class="fa fa-medium" aria-hidden="true"></i><span> Medium</span></a>_
+_This post was also posted on medium at <a href="https://medium.com/@cvigroup.cfi/exploring-adversarial-reprogramming-c9e14bf3236a" class="btn btn--success" ><i class="fa fa-medium" aria-hidden="true"></i><span> Medium</span></a>_
+
+_Orginal post [here](https://rajatvd.github.io/Exploring-Adversarial-Reprogramming/)_
 
 
 Google brain recently published a paper titled [Adversarial Reprogramming of Neural Networks](https://arxiv.org/pdf/1806.11146.pdf) which caught my attention. It introduced a new kind of adversarial example for neural networks, those which could actually perform a useful task for the adversary as opposed to just fooling the attacked network. The attack 'reprograms' a network designed for a particular task to perform a completely different one. The paper showed that popular ImageNet architectures like Inception and ResNets can be successfully reprogrammed to perform quite well in different tasks like counting squares, MNIST and CIFAR-10.
