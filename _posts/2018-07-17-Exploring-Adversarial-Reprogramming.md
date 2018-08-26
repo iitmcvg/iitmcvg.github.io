@@ -3,7 +3,7 @@ layout: single
 title: Exploring Adversarial Reprogramming
 categories: papers
 mathjax: true
-description: Google brain recently published a paper titled <a href="https://arxiv.org/pdf/1806.11146.pdf">Adversarial Reprogramming of Neural Networks</a> which caught my attention. I explore the ideas of the paper and perform some of my own experiments in this post.
+description: 'Google brain recently published a paper titled <a href="https://arxiv.org/pdf/1806.11146.pdf">Adversarial Reprogramming of Neural Networks</a> which caught my attention. I explore the ideas of the paper and perform some of my own experiments in this post.'
 header:
   teaser: /assets/images/posts/adv_reprog/cover_5iscat.png
 toc: true
