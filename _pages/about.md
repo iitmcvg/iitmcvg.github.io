@@ -12,9 +12,7 @@ header:
   overlay_image: https://finbrain.tech/blog/wp-content/uploads/2018/08/NeuralNet-min-2000x1200.jpg
   cta_label: "Contact Us"
   cta_url: "/contact/"
-excerpt: "
-
-"
+excerpt: ""
 intro:
   - excerpt: 'We began as a small group in September 2009 with a vision of building a team of students with  expertise in Computer Vision.'
 feature_row:

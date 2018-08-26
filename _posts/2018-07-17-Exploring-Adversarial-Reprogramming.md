@@ -37,7 +37,7 @@ The gist of the reprogramming process is as follows:
 * Train only the adversarial program image on the remapped labels, while keeping the Inception weights frozen. 
 * Now you got yourself an MNIST classifier: Take an MNIST image, add on your trained adversarial program, run it through Inception, and remap its labels to get predictions for MNIST.
 
-The exact method of 'adding' the adversarial program is as follows. Since ImageNet models require a 224 x 224 image, we use that as the size of our program weights. Let's call the weights image $W$. A nonlinear activation is applied to the weights after masking out the centre 28x28 section, which is then replaced by the MNIST image. This is the image which is passed in to our ImageNet model. Let's define the mask with 0's in the centre 28x28 as $M$. The adversarial input to the ImageNet model $X_{adv}$ is:
+The exact method of 'adding' the adversarial program is as follows. Since ImageNet models require a 224 x 224 image, we use that as the size of our program weights. Let's call the weights image $$W$$. A nonlinear activation is applied to the weights after masking out the centre 28x28 section, which is then replaced by the MNIST image. This is the image which is passed in to our ImageNet model. Let's define the mask with 0's in the centre 28x28 as $M$. The adversarial input to the ImageNet model $$X_{adv}$$ is:
 
 $$X_{adv} = \tanh(W \odot M)+ pad(X)$$
 
@@ -53,7 +53,7 @@ where $\odot$ represents element wise multiplication, and $X$ is the input MNIST
     <figcaption>Pass through ImageNet model and remap outputs.</figcaption>
 </figure>
 
-The outputs of the ImageNet model are trained using the cross-entropy loss as is normal for any classification problem. L2 regularization of the weight $W$ was also done.
+The outputs of the ImageNet model are trained using the cross-entropy loss as is normal for any classification problem. L2 regularization of the weight $$W$$ was also done.
 
 The results of the paper were quite interesting. Here are some important observations:
 
@@ -65,14 +65,14 @@ The results of the paper were quite interesting. Here are some important observa
 
 ## Regularization using blurring
 
-One very important difference between these adversarial programs and traditional adversarial examples is that traditional examples were only deemed adversarial because the perturbation added to them was small in magnitude. However in this case, as the authors state, "the magnitude of this perturbation[adversarial program] need not be constrained", as the adversarial perturbation is not applied on any previously true example. This fact is leveraged when training the program, as there are no limits on how large $W$ can be. Another point to note is that the perturbation is a nonlinear function of the trained weights $W$. This is in contrast to other adversarial examples like the [_Fast Gradient Sign Method_](https://arxiv.org/abs/1412.6572) which are linear perturbations.
+One very important difference between these adversarial programs and traditional adversarial examples is that traditional examples were only deemed adversarial because the perturbation added to them was small in magnitude. However in this case, as the authors state, "the magnitude of this perturbation[adversarial program] need not be constrained", as the adversarial perturbation is not applied on any previously true example. This fact is leveraged when training the program, as there are no limits on how large $$W$$ can be. Another point to note is that the perturbation is a nonlinear function of the trained weights $$W$$. This is in contrast to other adversarial examples like the [_Fast Gradient Sign Method_](https://arxiv.org/abs/1412.6572) which are linear perturbations.
 
 
 One point which I'd like to bring up is that previous adversarial perturbations were better off if they contained high frequency components which made them "look like noise" (although they are anything but noise), as this resulted in perturbations which are imperceptible by the human eye. In other words, the perturbations did not change the true label of the image, but successfully fooled the targeted network. In the topic of adversarial programs however, there is no requirement for these perturbations to contain only high frequencies and be imperceptible, as the goal of the program is to repurpose the targeted network rather than to simply fool it. This means that we can enforce some smoothness in the trained program as a regularization technique as opposed to using L2 regularization. 
 
 I trained an adversarial program for ResNet-18 to classify MNIST digits using regularization techniques borrowed from [this post](https://www.auduno.com/2015/07/29/visualizing-googlenet-classes/). The basic idea is as follows:
 
-* Blur the adversarial program image $W$ after each gradient step using a gaussian blur, with a gradually decreasing sigma.
+* Blur the adversarial program image $$W$$ after each gradient step using a gaussian blur, with a gradually decreasing sigma.
 * Blur the gradients as well, again using a gaussian blur with gradually decreasing sigma.
 
 After training for around 20 epochs, this was the resulting adversarial program:
@@ -128,7 +128,7 @@ The above experiments have focused on changing the input transformation and regu
 * Run CIFAR train set through ResNet. 
 * Get a histogram of ImageNet labels for each CIFAR label. 
 * Map each ImageNet label to the CIFAR label with the highest value.
-* For example, let's look at the ImageNet label _goldfish_. After passing the CIFAR training set through the model, let's say 10 trucks were classified as goldfish, 200 birds, 80 airplanes, etc. (these numbers are just examples). Suppose the 200 birds is the largest number of a single CIFAR class which was classified as _goldfish_. I then choose to map the _goldfish_ output to the CIFAR label _bird_. This is the greedy part - I map the ImageNet label $y$ to that CIFAR label which was classified as $y$ the most often (in the training set). I repeat this process for all 1000 ImageNet labels.
+* For example, let's look at the ImageNet label _goldfish_. After passing the CIFAR training set through the model, let's say 10 trucks were classified as goldfish, 200 birds, 80 airplanes, etc. (these numbers are just examples). Suppose the 200 birds is the largest number of a single CIFAR class which was classified as _goldfish_. I then choose to map the _goldfish_ output to the CIFAR label _bird_. This is the greedy part - I map the ImageNet label $$y$$ to that CIFAR label which was classified as $$y$$ the most often (in the training set). I repeat this process for all 1000 ImageNet labels.
 
 To train the program with a multiple label mapping, I added the output probabilities of the multiple ImageNet labels corresponding to each CIFAR-10 label to get a set of 10 probabilities corresponding to each CIFAR label. I then used the negative log likelihood loss on these probabilities. Before going to the multi label mapping, I also trained an arbitrary 10 label mapping for ResNet 18 on CIFAR. It achieved a test accuracy of about __61.84%__ after 35 epochs. I then trained the same ResNet using the above greedy multi-label mapping with the same training parameters. It achieved a test accuracy of __67.63%__ after just 16 epochs. 
 
