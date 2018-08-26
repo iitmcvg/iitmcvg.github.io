@@ -68,11 +68,25 @@ feature_row3:
   - image_path: /assets/images/about/confs.png
     alt: "conferences"
     title: "Conferences"
+
+support:
+  - excerpt: <big> Our Suppport Systems. </big>
+support_row:
+  - image_path: "https://upload.wikimedia.org/wikipedia/en/thumb/6/69/IIT_Madras_Logo.svg/220px-IIT_Madras_Logo.svg.png"
+    alt: ""
+    title: "IIT Madras"
+  - image_path: "http://cfi.iitm.ac.in/main/wp-content/uploads/2014/09/favicon.png"
+    alt: ""
+    excerpt: "A 24/7 student run lab, striving to make our motto of 'Walk in with an idea, walk out with a product' a reality.'"
+    title: "Centre for Innovation, IIT Madras"
+    url: "https://cfi.iitm.ac.in/"
+    btn_label: Read More
+    btn_class: "btn--primary"
     
 contact:
   - excerpt: <big>Contact Us.</big>
 feature_row4:
-  - image_path: 
+  - image_path:
     alt: ""
     title: ""
     url: "mailto:cvigroup.cfi@gmail.com"
@@ -102,7 +116,11 @@ feature_row4:
 
 {% include feature_row id="achievements" type="center" %}
 
-{% include feature_row id="feature_row3" type="center" %}
+{% include feature_row id="feature_row3" %}
+
+{% include feature_row id="support"  type="center" %}
+
+{% include feature_row id="support_row" type="center" %}
 
 {% include feature_row id="contact"  type="center" %}
 

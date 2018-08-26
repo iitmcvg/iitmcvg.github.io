@@ -12,7 +12,7 @@ main:
   #  url: "/forums/"
 
   - title: "Blog"
-    url: "/year-archive/"
+    url: "/blog/"
 
   - title: "Projects"
     url: "/projects/"

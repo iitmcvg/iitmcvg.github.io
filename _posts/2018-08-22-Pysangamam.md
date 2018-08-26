@@ -15,7 +15,7 @@ We are pleased to announce that 3 of our talk proposals from the Computer Vision
 
 * **Lokesh Kumar** would be covering an introductory talk on using numba for GPU parallelism in python.
 * **Nikhil Krishna** would be delivering a talk titled "Gentle Introduction to Effective Parallelism via Computer Vision."
-* **Rajat VD** will be covering a talk on python generators and its use cases in Deep Learning
+* **Rajat V D** will be covering a talk on python generators and its use cases in Deep Learning
 
 We will also be conducting a workshop titled "Computer Vision through the Ages", where we would take you along the evolution of Computer vision since the last two decades, cover factors that influence the field the most today and provide intuiton on the approaches taken in this period.
 
