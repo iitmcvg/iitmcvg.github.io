@@ -23,3 +23,6 @@ As promised, here are our slides and repo's used:
 
 Feel free to write back to us at cvigroup[dot]cfi[at]gmail[dot]com, or follow us on facebook or twitter for more updates!
  
+**Update 9th September 2018**: We have embedded the slides in this post below.
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSulJC8mcUd5RlMNpRHYQzghXfq8TZMou86nyIQnZUTh3WgIq0s4yTr_5oPTJqxv7ziPEqGOSODzDfW/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
