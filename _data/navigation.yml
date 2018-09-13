@@ -13,7 +13,8 @@ main:
 
   - title: "Blog"
     url: "/blog/"
-
+  - title: "Sessions"
+    url: "/sessions/"
   - title: "Projects"
     url: "/projects/"
     children:
