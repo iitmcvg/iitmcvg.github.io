@@ -1,5 +1,5 @@
 ---
-title: "Sessions Fall 2018"
+title: "Sessions: Fall 2018"
 layout: single
 permalink: "/sessions/"
 header:
