@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Problem Statements: Session 1"
+title: "Problem Statements on basic OpenCV"
 category: problem_statements
 description: " Hello "
 mathjax: true
