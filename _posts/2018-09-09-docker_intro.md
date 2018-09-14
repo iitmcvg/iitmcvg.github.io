@@ -30,6 +30,8 @@ Firstly, download a compatible version of docker from here:
 * For installation of Docker in Mac -   
 https://download.docker.com/mac/stable/Docker.dmg
 
+_Note: while installing dockertools for windows, check all options inclduing UEFI and Virtualisation_
+
 
 ### Installation
 
