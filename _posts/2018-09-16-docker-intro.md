@@ -45,8 +45,7 @@ _Note: while installing dockertools for windows, check all options inclduing UEF
 * On your Desktop, find the Docker QuickStart Terminal icon.  
 * Click the Docker QuickStart icon to launch a pre-configured Docker Toolbox terminal.    
 * If the system displays a User Account Control prompt to allow VirtualBox to make changes to your computer. Choose Yes.  
-* The terminal does several things to set up Docker Toolbox for you. When it is done, the terminal displays the $ prompt.  
-* Make the terminal active by clicking your mouse next to the $ prompt.
+* The terminal does several things to set up Docker Toolbox for you. When it is done, the terminal displays a prompt.  
 
 * The prompt is traditionally a \$ dollar sign. You type commands into the command line which is the area after the prompt. Your cursor is indicated by a highlighted area or a \| that appears in the command line. After typing a command, always press RETURN.
 
@@ -98,10 +97,6 @@ jupyter notebook --ip=0.0.0.0 --allow-root
 
 ```
 root@5e3ca2f04d54:/Content/Sessions/CV_Intro_Session_1_2018# jupyter notebook --ip=0.0.0.0 --allow-root
-[I 13:42:26.419 NotebookApp] Writing notebook server cookie secret to /root/.local/share/jupyter/runtime/notebook_cookie_secret
-[I 13:42:26.667 NotebookApp] Serving notebooks from local directory: /Content/Sessions/CV_Intro_Session_1_2018
-[I 13:42:26.667 NotebookApp] The Jupyter Notebook is running at:
-[I 13:42:26.667 NotebookApp] http://(5e3ca2f04d54 or 127.0.0.1):8888/?token=56d48e36ca256e00823506c4f2cf1fc89264a3ba025d3307
 [I 13:42:26.667 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 [W 13:42:26.668 NotebookApp] No web browser found: could not locate runnable browser.
 [C 13:42:26.669 NotebookApp]
