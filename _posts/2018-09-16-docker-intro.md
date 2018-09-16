@@ -16,10 +16,9 @@ We are using these containers to manage session requirements for the Fall of 201
 
 Firstly, download a compatible version of docker from here:
 
-* For installation of Docker in Windows - https://download.docker.com/win/stable/DockerToolbox.exe 
+* For installation of Docker in Windows - [link](https://download.docker.com/win/stable/DockerToolbox.exe) 
 * For installation of Docker in Linux(Ubuntu) - direct curl command available.  
-* For installation of Docker in Mac -   
-https://download.docker.com/mac/stable/Docker.dmg
+* For installation of Docker in Mac - [link](https://download.docker.com/mac/stable/Docker.dmg)
 
 _Note: while installing dockertools for windows, check all options inclduing UEFI and Virtualisation_
 
