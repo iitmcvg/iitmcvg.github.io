@@ -22,7 +22,6 @@ Firstly, download a compatible version of docker from here:
 
 _Note: while installing dockertools for windows, check all options inclduing UEFI and Virtualisation_
 
-
 ## Installation
 
 ### Linux
@@ -49,7 +48,7 @@ _Note: while installing dockertools for windows, check all options inclduing UEF
 * The terminal does several things to set up Docker Toolbox for you. When it is done, the terminal displays the $ prompt.  
 * Make the terminal active by clicking your mouse next to the $ prompt.
 
-* The prompt is traditionally a \$ dollar sign. You type commands into the command line which is the area after the prompt. Your cursor is indicated by a highlighted area or a | that appears in the command line. After typing a command, always press RETURN.
+* The prompt is traditionally a \$ dollar sign. You type commands into the command line which is the area after the prompt. Your cursor is indicated by a highlighted area or a \| that appears in the command line. After typing a command, always press RETURN.
 
 ## Docker Hello World
 
