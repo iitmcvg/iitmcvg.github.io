@@ -24,7 +24,8 @@ Each entry has the corresponding date, topics (including the relevant post), rep
 
 ## Deep Learning MasterClass
 
-<a href="https://github.com/orgs/iitmcvg/teams/deep-learning-master-class/discussions" class="btn--github" ><i class="fa fa-github" aria-hidden="true"></i> Discussion Forum </a>
+[<i class="fa fa-github" aria-hidden="true"></i> Dicussion Forum](#link){: .btn .btn--github}
+
 
 ## Other workshops
 
