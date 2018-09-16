@@ -24,6 +24,8 @@ Each entry has the corresponding date, topics (including the relevant post), rep
 
 ## Deep Learning MasterClass
 
+<a href="https://github.com/orgs/iitmcvg/teams/deep-learning-master-class/discussions" class="btn--github" ><i class="fa fa-github" aria-hidden="true"></i><span> Discussion Forum</span></a>
+
 ## Other workshops
 
 | Date                | Topics                           | Github Repos                                                                                                                                                  | Dockerfile                                                                                               | Problem Sheets          |
