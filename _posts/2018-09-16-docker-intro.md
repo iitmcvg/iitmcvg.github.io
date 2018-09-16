@@ -17,23 +17,42 @@ We are using these containers to manage session requirements for the Fall of 201
 Firstly, download a compatible version of docker from here:
 
 * For installation of Docker in Windows - https://download.docker.com/win/stable/DockerToolbox.exe 
-* For installation of Docker in Linux(Ubuntu) - https://docs.docker.com/install/linux/docker-ce/ubuntu/   
+* For installation of Docker in Linux(Ubuntu) - direct curl command available.  
 * For installation of Docker in Mac -   
 https://download.docker.com/mac/stable/Docker.dmg
 
 _Note: while installing dockertools for windows, check all options inclduing UEFI and Virtualisation_
 
 
-### Installation
+## Installation
 
-* Before installation, additional software packages like Kitematic and Virtualbox can be unchecked. 
+### Linux
+
+* Run `curl -fsSL get.docker.com | sh` to get the latest version of docker.
+
+* Open your terminal, run `docker --version` to output the version.
+
+### macOS
+
+* After you have installed docker, drag it to your applications folder.
+
+* Run the docker app, and open a new terminal.
+
+* Verify your docker version with `docker --version`.
+
+### Windows:
+
+* Before installation, additional software packages like Kitematic and Virtualbox need to be marked, ensure you check all of them during the installer. 
 * The installer adds Docker Toolbox to your Applications folder.   
 * On your Desktop, find the Docker QuickStart Terminal icon.  
 * Click the Docker QuickStart icon to launch a pre-configured Docker Toolbox terminal.    
 * If the system displays a User Account Control prompt to allow VirtualBox to make changes to your computer. Choose Yes.  
 * The terminal does several things to set up Docker Toolbox for you. When it is done, the terminal displays the $ prompt.  
 * Make the terminal active by clicking your mouse next to the $ prompt.
-* The prompt is traditionally a $ dollar sign. You type commands into the command line which is the area after the prompt. Your cursor is indicated by a highlighted area or a | that appears in the command line. After typing a command, always press RETURN.
+
+* The prompt is traditionally a \$ dollar sign. You type commands into the command line which is the area after the prompt. Your cursor is indicated by a highlighted area or a | that appears in the command line. After typing a command, always press RETURN.
+
+## Docker Hello World
 
 * Type the **docker run hello-world** command and press RETURN.
 * The command does some work for you, if everything runs well, the command’s output looks like this:
@@ -46,7 +65,7 @@ $ docker run hello-world
 … … … …
 ```
 
-### Running the Container
+## Running the Container
 
 * If you are on windows, run the command **docker-machine ip** and make a note of the IP address shown as output.
 
