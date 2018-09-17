@@ -26,6 +26,17 @@ Each entry has the corresponding date, topics (including the relevant post), rep
 
 [<i class="fa fa-github" aria-hidden="true"></i> Dicussion Forum](https://github.com/orgs/iitmcvg/teams/deep-learning-master-class/){: .btn .btn--github}
 
+| Date                              | Topics                             |  Content
+|-----------------------------------|------------------------------------|-------------------------|
+|19th September | Recap of Machine Learning. Why Deep Learning? | Will be updated |
+|20th September | Multi Layer Perceptrons | Will be updated |
+|24th September | Training Deep Networks: Regularisation, Optimisation and Tuning | Will be updated |
+|25th September | Convolutional Neural Networks | Will be updated |
+|28th September | Recurrent Neural Networks | Will be updated |
+|TBD | Word Models | Will be updated |
+|TBD | Generative networks | Will be updated |
+|TBD | Introduction to advanced topics | Will be updated |
+
 
 ## Other workshops
 
