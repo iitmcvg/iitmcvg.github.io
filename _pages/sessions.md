@@ -24,7 +24,7 @@ Each entry has the corresponding date, topics (including the relevant post), rep
 
 ## Deep Learning MasterClass
 
-[<i class="fa fa-github" aria-hidden="true"></i> Dicussion Forum](https://github.com/orgs/iitmcvg/teams/deep-learning-master-class/){: .btn .btn--github}
+[<i class="fa fa-forumbee" aria-hidden="true"></i> Dicussion Forum](https://iitmcvg.freeflarum.com){: .btn .btn--success}
 
 
 ## Other workshops
