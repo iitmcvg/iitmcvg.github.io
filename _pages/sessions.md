@@ -21,6 +21,9 @@ Each entry has the corresponding date, topics (including the relevant post), rep
 |----------------------------------	|----------------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------	|----------------------------------------------------------------------------------------------------------	|-------------------------	|
 | 10th August 2018  | Orientation Session              	| [Slides](https://drive.google.com/open?id=1P2lw_ZvgBKhzJ6mZA1FUSkLn4qEawxxBttbZskxUWbI)                                                                       	| NA                                                                                                       	| NA                      	|
 | 10th September 2018  | Introduction to Computer Vision 	| [Repo](https://github.com/iitmcvg/Content/blob/master/Sessions/CV_Intro_Session_1_2018)                                                                       	| [Dockerfile](https://github.com/iitmcvg/Content/blob/master/Sessions/CV_Intro_Session_1_2018/Dockerfile) 	| [Problem Statements](https://iitmcvg.github.io/problem_statements/Problem_statements/) 	|
+| 20th September 2018  | Introduction to Git 	| [Repo](https://github.com/iitmcvg/presentations/blob/master/git-session), [Slides](https://gitpitch.com/iitmcvg/presentations/master?p=git-session#/11)                                                                      	|  NA                                                                                                       	|  NA                                                                                                       	|
+
+
 
 ## Deep Learning MasterClass
 
