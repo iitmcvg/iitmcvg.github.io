@@ -28,8 +28,8 @@ Each entry has the corresponding date, topics (including the relevant post), rep
 
 | Date                              | Topics                             |  Content
 |-----------------------------------|------------------------------------|-------------------------|
-|19th September | Recap of Machine Learning. Why Deep Learning? | Will be updated |
-|20th September | Multi Layer Perceptrons | Will be updated |
+|19th September | Recap of Machine Learning. Why Deep Learning? | [Link](https://drive.google.com/open?id=14MRJleQh98riDF88z4zm_4mWuEIO4YFI) |
+|20th September | Multi Layer Perceptrons | [Link] |
 |24th September | Training Deep Networks: Regularisation, Optimisation and Tuning | Will be updated |
 |25th September | Convolutional Neural Networks | Will be updated |
 |28th September | Recurrent Neural Networks | Will be updated |
