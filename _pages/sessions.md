@@ -33,10 +33,9 @@ Each entry has the corresponding date, topics (including the relevant post), rep
 |-----------------------------------|------------------------------------|-------------------------|
 |19th September | Recap of Machine Learning. Why Deep Learning? | [Link](https://drive.google.com/open?id=14MRJleQh98riDF88z4zm_4mWuEIO4YFI) |
 |20th September | Multi Layer Perceptrons | [Link](https://drive.google.com/file/d/0BxkBNdPqeM3GQUNJd29QeVVKQld3bnYwbjNheUt4Nl9FcDhJ/view) |
-|24th September | Training Deep Networks: Regularisation, Optimisation and Tuning | Will be updated |
-|25th September | Convolutional Neural Networks | Will be updated |
-|28th September | Recurrent Neural Networks | Will be updated |
-|TBD | Word Models | Will be updated |
+|24th September | Training Deep Networks: Regularisation, Optimisation and Tuning | [Link1](https://drive.google.com/file/d/1P5Hh5AhoaUZC0C7vgeG15-ebToSP6NyG/view?usp=sharing) , [Link2](https://drive.google.com/file/d/1Yl2MAn6_Pok3hqwD8bw85C3YFRT5xGQf/view?usp=sharing)
+|25th September | Convolutional Neural Networks | [Link](https://docs.google.com/presentation/d/1VibY06-gmV9Wq0mOACz038DBsVcHU_bICEA8LdWJ5Sw/edit?usp=sharing) |
+|2nd October | Word Models | Will be updated ||
 |TBD | Generative networks | Will be updated |
 |TBD | Introduction to advanced topics | Will be updated |
 
