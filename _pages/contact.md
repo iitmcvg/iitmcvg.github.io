@@ -41,5 +41,7 @@ feature_row:
 
 ## Student Heads:
 
-* Lokesh Kumar - 9444011564 -[lokesh.karpagam@gmail.com]("mailto:lokesh.karpagam@gmail.com")
-* Varun Sundar - 9900391144 - [varun19299@gmail.com]("mailto:varun19299@gmail.com")
+* Anand Gokhale - 9980366443[anandug25999@gmail.com]("mailto:anandug25999@gmail.com")
+* Vighnesh Natarajan - 8105627049[vighneshnatarajan@gmail.com]("mailto:vighneshnatarajan@gmail.com")
+
+
