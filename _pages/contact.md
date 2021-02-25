@@ -41,7 +41,7 @@ feature_row:
 
 ## Student Heads:
 
-* Anand Gokhale - 9980366443[anandug25999@gmail.com]("mailto:anandug25999@gmail.com")
-* Vighnesh Natarajan - 8105627049[vighneshnatarajan@gmail.com]("mailto:vighneshnatarajan@gmail.com")
+* Mukhesh Pugalendhi - 75984 51597 [mukheshpugalendhi@gmail.com]("mailto:mukheshpugalendhi@gmail.com")
+* Irfaan Arif - 99950 93880 [irfaan365@gmail.com]("mailto:irfaan365@gmail.com")
 
 

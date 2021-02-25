@@ -4,7 +4,7 @@ layout: single
 permalink: "/sessions/"
 header:
 #  overlay_image: https://drive.google.com/file/d/1i-4jzmwuVnVldwFsKOAxgp-MLpjFujfM/view?usp=sharing
-  teaser: https://scontent-maa2-1.xx.fbcdn.net/v/t1.0-9/39040858_2015575558474735_7568607226030456832_o.jpg?_nc_cat=0&oh=3a8a421ecca018a7479881f81c196e42&oe=5C0220F7
+  teaser: /assets/images/about/session.jpg
   overlay_filter: 0.6 # same as adding an opacity of 0.5 to a black background
 author_profile: true
 ---
