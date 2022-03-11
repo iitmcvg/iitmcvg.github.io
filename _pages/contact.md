@@ -41,7 +41,7 @@ feature_row:
 
 ## Student Heads:
 
-* Mukhesh Pugalendhi - 75984 51597 [mukheshpugalendhi@gmail.com]("mailto:mukheshpugalendhi@gmail.com")
-* Irfaan Arif - 99950 93880 [irfaan365@gmail.com]("mailto:irfaan365@gmail.com")
+* Aditya Mohan - 9500022420 [h.adityamohan@gmail.com]("mailto:h.adityamohan@gmail.com")
+* Shreyas Singh - 8318387585 [shreyassocool1982@gmail.com]("mailto:shreyassocool1982@gmail.com")
 
 
