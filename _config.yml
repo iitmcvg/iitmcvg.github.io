@@ -299,6 +299,19 @@ defaults:
       related: true
       use_math: true
 
+# Current Projects
+  - scope:
+      path: ""
+      type: current-projects
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      read_time: true
+      comments: true
+      related: true
+      use_math: true
+
 # Ongoing Projects
   - scope:
       path: ""
