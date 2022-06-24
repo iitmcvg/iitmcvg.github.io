@@ -41,7 +41,6 @@ feature_row:
 
 ## Student Heads:
 
-* Aditya Mohan - 9500022420 [h.adityamohan@gmail.com]("mailto:h.adityamohan@gmail.com")
-* Shreyas Singh - 8318387585 [shreyassocool1982@gmail.com]("mailto:shreyassocool1982@gmail.com")
-
+* Abhipraay Nevatia - +91 96207 74230
+* Nirupama - +91 9962571729
 
